@@ -1,0 +1,2327 @@
+.
+├── app
+│   ├── AmazonDeviceMetrics
+│   │   ├── AmazonDeviceMetrics.apk
+│   │   └── arm
+│   │       └── AmazonDeviceMetrics.odex
+│   ├── AmazonWebView
+│   │   ├── AmazonWebView.apk
+│   │   └── lib
+│   │       └── arm
+│   │           └── libwebviewextchromium.so -> /system/lib/libwebviewextchromium.so
+│   ├── Bluetooth
+│   │   ├── arm
+│   │   │   └── Bluetooth.odex
+│   │   ├── Bluetooth.apk
+│   │   └── lib
+│   │       └── arm
+│   │           ├── libbluetooth_jni.so -> /system/lib/libbluetooth_jni.so
+│   │           └── libbtpm_jni.so -> /system/lib/libbtpm_jni.so
+│   ├── CaptivePortalLogin
+│   │   ├── arm
+│   │   │   └── CaptivePortalLogin.odex
+│   │   └── CaptivePortalLogin.apk
+│   ├── CertInstaller
+│   │   ├── arm
+│   │   │   └── CertInstaller.odex
+│   │   └── CertInstaller.apk
+│   ├── com.amazon.alexa.externalmediaplayer.fireos
+│   │   └── com.amazon.alexa.externalmediaplayer.fireos.apk
+│   ├── DocumentsUI
+│   │   ├── arm
+│   │   │   └── DocumentsUI.odex
+│   │   └── DocumentsUI.apk
+│   ├── fdrw
+│   │   ├── arm
+│   │   │   └── fdrw.odex
+│   │   └── fdrw.apk
+│   ├── FireTvResolutionCycler
+│   │   ├── arm
+│   │   │   └── FireTvResolutionCycler.odex
+│   │   └── FireTvResolutionCycler.apk
+│   ├── FrameworksMetrics
+│   │   ├── arm
+│   │   │   └── FrameworksMetrics.odex
+│   │   └── FrameworksMetrics.apk
+│   ├── HTMLViewer
+│   │   ├── arm
+│   │   │   └── HTMLViewer.odex
+│   │   └── HTMLViewer.apk
+│   ├── HybridAdInfoService
+│   │   ├── arm
+│   │   │   └── HybridAdInfoService.odex
+│   │   └── HybridAdInfoService.apk
+│   ├── KeyChain
+│   │   ├── arm
+│   │   │   └── KeyChain.odex
+│   │   └── KeyChain.apk
+│   ├── KeyPolicyManagerUI
+│   │   ├── arm
+│   │   │   └── KeyPolicyManagerUI.odex
+│   │   └── KeyPolicyManagerUI.apk
+│   ├── legalresources
+│   │   └── legalresources.apk
+│   ├── MtkFloatMenu
+│   │   ├── arm
+│   │   │   └── MtkFloatMenu.odex
+│   │   └── MtkFloatMenu.apk
+│   ├── PacProcessor
+│   │   ├── arm
+│   │   │   └── PacProcessor.odex
+│   │   ├── lib
+│   │   │   └── arm
+│   │   │       └── libjni_pacprocessor.so -> /system/lib/libjni_pacprocessor.so
+│   │   └── PacProcessor.apk
+│   ├── PicoTts
+│   │   ├── arm
+│   │   │   └── PicoTts.odex
+│   │   ├── lib
+│   │   │   └── arm
+│   │   │       ├── libttscompat.so -> /system/lib/libttscompat.so
+│   │   │       └── libttspico.so -> /system/lib/libttspico.so
+│   │   └── PicoTts.apk
+│   ├── PinyinIME
+│   │   ├── arm
+│   │   │   └── PinyinIME.odex
+│   │   ├── lib
+│   │   │   └── arm
+│   │   │       └── libjni_pinyinime.so -> /system/lib/libjni_pinyinime.so
+│   │   └── PinyinIME.apk
+│   ├── TvUnsupportedIntent
+│   │   ├── arm
+│   │   │   └── TvUnsupportedIntent.odex
+│   │   └── TvUnsupportedIntent.apk
+│   ├── UnifiedSettingsProvider
+│   │   ├── arm
+│   │   │   └── UnifiedSettingsProvider.odex
+│   │   └── UnifiedSettingsProvider.apk
+│   ├── UserDictionaryProvider
+│   │   ├── arm
+│   │   │   └── UserDictionaryProvider.odex
+│   │   └── UserDictionaryProvider.apk
+│   └── WhiteListedUrlProvider
+│       ├── arm
+│       │   └── WhiteListedUrlProvider.odex
+│       └── WhiteListedUrlProvider.apk
+├── bin
+│   ├── 6620_launcher
+│   ├── 6620_wmt_concurrency
+│   ├── 6620_wmt_lpbk
+│   ├── adb_usb.sh
+│   ├── akmd09911
+│   ├── akmd8963
+│   ├── am
+│   ├── amzn_dha_hmac
+│   ├── amzn_dha_tool
+│   ├── amzn_drmprov_check
+│   ├── amzn_drmprov_tool
+│   ├── applypatch
+│   ├── appops
+│   ├── app_process -> app_process32
+│   ├── app_process32
+│   ├── appwidget
+│   ├── atcid
+│   ├── atci_service
+│   ├── atrace
+│   ├── atrace-server
+│   ├── audiocmdservice_atci
+│   ├── auto_hdmi.sh
+│   ├── auto_shutdown.sh
+│   ├── battery_log.sh
+│   ├── bcc
+│   ├── blkid
+│   ├── bmgr
+│   ├── bootanimation
+│   ├── btremoted
+│   ├── bu
+│   ├── bugreport
+│   ├── cat -> toolbox
+│   ├── chcon -> toolbox
+│   ├── check_emmc_health.sh
+│   ├── chmod -> toolbox
+│   ├── chown -> toolbox
+│   ├── clatd
+│   ├── clear -> toolbox
+│   ├── cmp -> toolbox
+│   ├── content
+│   ├── cp -> toolbox
+│   ├── curl
+│   ├── dalvikvm -> dalvikvm32
+│   ├── dalvikvm32
+│   ├── date -> toolbox
+│   ├── dd -> toolbox
+│   ├── debuggerd
+│   ├── devicetype_service
+│   ├── dex2oat
+│   ├── df -> toolbox
+│   ├── dhcpcd
+│   ├── display
+│   ├── dmesg -> toolbox
+│   ├── dmesg_log.sh
+│   ├── dnsmasq
+│   ├── dpm
+│   ├── drmserver
+│   ├── du -> toolbox
+│   ├── dump-ramdump.sh
+│   ├── dumpstate
+│   ├── dumpsys
+│   ├── e2fsck
+│   ├── ext4_resize
+│   ├── factory
+│   ├── fsck_msdos
+│   ├── ftv_dnsmasq.sh
+│   ├── getenforce -> toolbox
+│   ├── getevent -> toolbox
+│   ├── getprop -> toolbox
+│   ├── getsebool -> toolbox
+│   ├── grep -> toolbox
+│   ├── gzip
+│   ├── hd -> toolbox
+│   ├── hdmi
+│   ├── hostapd
+│   ├── hostapd_cli
+│   ├── id -> toolbox
+│   ├── idc
+│   ├── idmap
+│   ├── idme
+│   ├── ifconfig -> toolbox
+│   ├── iftop -> toolbox
+│   ├── ime
+│   ├── inlocservice
+│   ├── inloctestcli
+│   ├── input
+│   ├── insmod -> toolbox
+│   ├── installd
+│   ├── install-recovery.sh
+│   ├── ioctl -> toolbox
+│   ├── ionice -> toolbox
+│   ├── ip
+│   ├── ip6tables
+│   ├── iptables
+│   ├── keystore
+│   ├── kill -> toolbox
+│   ├── kisd
+│   ├── lab126_usb_charge_port_type.sh
+│   ├── libtftpc
+│   ├── linker
+│   ├── lmkd
+│   ├── ln -> toolbox
+│   ├── load_policy -> toolbox
+│   ├── log -> toolbox
+│   ├── logcat
+│   ├── logcat_log.sh
+│   ├── logd
+│   ├── logwrapper
+│   ├── ls -> toolbox
+│   ├── lsmod -> toolbox
+│   ├── lsof -> toolbox
+│   ├── make_ext4fs
+│   ├── md5 -> toolbox
+│   ├── mdnsd
+│   ├── mdp_server
+│   ├── media
+│   ├── mediaserver
+│   ├── meta_tst
+│   ├── mkdir -> toolbox
+│   ├── mknod -> toolbox
+│   ├── mkswap -> toolbox
+│   ├── mmp
+│   ├── monkey
+│   ├── mount -> toolbox
+│   ├── msensord
+│   ├── mt8127_hdmi
+│   ├── mtpd
+│   ├── mv -> toolbox
+│   ├── nandread -> toolbox
+│   ├── ndc
+│   ├── neo-init
+│   ├── neo-service-coordinator
+│   ├── netcfg
+│   ├── netd
+│   ├── netstat -> toolbox
+│   ├── newfs_msdos -> toolbox
+│   ├── nohup -> toolbox
+│   ├── notify -> toolbox
+│   ├── nvram_agent_binder
+│   ├── nvram_daemon
+│   ├── oatdump
+│   ├── patchoat
+│   ├── perfmonitord
+│   ├── perfstatsd
+│   ├── ping
+│   ├── ping6
+│   ├── pm
+│   ├── pppd
+│   ├── pq
+│   ├── PrintBootInfo
+│   ├── printenv -> toolbox
+│   ├── prlimit -> toolbox
+│   ├── ps -> toolbox
+│   ├── racoon
+│   ├── readlink -> toolbox
+│   ├── reboot
+│   ├── recovery_reporter
+│   ├── renice -> toolbox
+│   ├── requestsync
+│   ├── resize2fs
+│   ├── restorecon -> toolbox
+│   ├── rm -> toolbox
+│   ├── rmdir -> toolbox
+│   ├── rmmod -> toolbox
+│   ├── route -> toolbox
+│   ├── rpmb_svc
+│   ├── run-as
+│   ├── runcon -> toolbox
+│   ├── schedtop -> toolbox
+│   ├── screencap
+│   ├── screenrecord
+│   ├── sdcard
+│   ├── sendevent -> toolbox
+│   ├── sensorservice
+│   ├── service
+│   ├── servicemanager
+│   ├── setenforce -> toolbox
+│   ├── setprop -> toolbox
+│   ├── setsebool -> toolbox
+│   ├── settings
+│   ├── sh
+│   ├── sleep -> toolbox
+│   ├── smd -> toolbox
+│   ├── socks
+│   ├── start -> toolbox
+│   ├── stop -> toolbox
+│   ├── surfaceflinger
+│   ├── svc
+│   ├── swapoff -> toolbox
+│   ├── swapon -> toolbox
+│   ├── sync -> toolbox
+│   ├── tc
+│   ├── temperature_log.sh
+│   ├── ThermalBenchmarkAutomation.sh
+│   ├── thermald
+│   ├── thermal_log.sh
+│   ├── thermal_manager
+│   ├── tinycap
+│   ├── tinymix
+│   ├── tinypcminfo
+│   ├── tinyplay
+│   ├── toolbox
+│   ├── top -> toolbox
+│   ├── touch -> toolbox
+│   ├── uiautomator
+│   ├── umount -> toolbox
+│   ├── uncrypt
+│   ├── uptime -> toolbox
+│   ├── vdc
+│   ├── vmstat -> toolbox
+│   ├── vold
+│   ├── vpartition
+│   ├── watchprops -> toolbox
+│   ├── wipe -> toolbox
+│   ├── wipe_fos_flags
+│   ├── wm
+│   ├── wmt_loader
+│   ├── wpa_cli
+│   └── wpa_supplicant
+├── build.prop
+├── etc
+│   ├── apns-conf.xml
+│   ├── audio_effects.conf
+│   ├── audio_policy.conf
+│   ├── bcompat.manifest
+│   ├── bluetooth
+│   │   ├── auto_pair_devlist.conf
+│   │   ├── bt_did.conf
+│   │   ├── btmac.sh
+│   │   ├── bt_stack.conf
+│   │   ├── bt_vendor.conf
+│   │   └── rfkill_bt.sh
+│   ├── chronos.conf
+│   ├── clatd.conf
+│   ├── common_device_policy.xml
+│   ├── compat_hint.conf
+│   ├── contentsupport.json
+│   ├── dalvik
+│   │   └── interfaces
+│   │       └── com_amazon_android_metrics_MetricsFactory.metrics
+│   ├── default-permissions
+│   │   ├── permissions_com.amazon.tv.ffsprovisioneeclient.xml
+│   │   └── permissions_com.amazon.uxcontrollerservice.xml
+│   ├── dhcpcd
+│   │   ├── dhcpcd.conf
+│   │   ├── dhcpcd-hooks
+│   │   │   ├── 20-dns.conf
+│   │   │   └── 95-configured
+│   │   └── dhcpcd-run-hooks
+│   ├── display_conf
+│   ├── dnsmasq.conf
+│   ├── event-log-tags
+│   ├── factory.ini
+│   ├── fallback_fonts_cn.xml
+│   ├── fallback_fonts_ja.xml
+│   ├── fallback_fonts_latin.xml
+│   ├── fallback_fonts.xml
+│   ├── fdrw_default.conf
+│   ├── ffs_endpoint_host_names.csv
+│   ├── firmware
+│   │   ├── ROMv2_patch_1_0_hdr.bin
+│   │   ├── ROMv2_patch_1_1_hdr.bin
+│   │   └── WMT_SOC.cfg
+│   ├── fonts
+│   │   ├── cachedir
+│   │   │   ├── 3336a65c52528c9c368e942d3dd307f8-le64.cache-4
+│   │   │   └── CACHEDIR.TAG
+│   │   ├── conf.d
+│   │   │   ├── 40-nonlatin.conf
+│   │   │   ├── 45-latin.conf
+│   │   │   └── 48-lab126-local.conf
+│   │   ├── fonts.conf
+│   │   └── fonts.dtd
+│   ├── fonts.xml
+│   ├── global_policy.xml
+│   ├── hosts
+│   ├── init.fosflags.sh
+│   ├── ivona
+│   │   ├── addons
+│   │   │   └── eng.usa.nina_1466424645000
+│   │   │       └── ivona.addon
+│   │   ├── ivona_config.xml
+│   │   └── lex
+│   │       ├── deu.lex
+│   │       └── eng.lex
+│   ├── kft_blacklist.conf
+│   ├── kisd_starter.sh
+│   ├── labdictionary
+│   ├── media_codecs_google_audio.xml
+│   ├── media_codecs_google_telephony.xml
+│   ├── media_codecs_google_video.xml
+│   ├── media_codecs.xml
+│   ├── media_profiles.xml
+│   ├── mkshrc
+│   ├── monitoring.conf
+│   ├── mtklog-config.prop
+│   ├── mtk_omx_core.cfg
+│   ├── NOTICE.html.gz
+│   ├── perfMonitor_config.json
+│   ├── permissions
+│   │   ├── adm.xml
+│   │   ├── amazon-ads-registration.xml
+│   │   ├── amazon.media.tv.dvr.xml
+│   │   ├── amazon_remoteviews-metadata.xml
+│   │   ├── android.amazon.res.xml
+│   │   ├── android.hardware.bluetooth_le.xml
+│   │   ├── android.hardware.bluetooth.xml
+│   │   ├── android.hardware.ethernet.xml
+│   │   ├── android.hardware.hdmi.cec.xml
+│   │   ├── android.hardware.usb.accessory.xml
+│   │   ├── android.hardware.usb.host.xml
+│   │   ├── android.hardware.wifi.direct.xml
+│   │   ├── android.hardware.wifi.xml
+│   │   ├── android.software.webview.xml
+│   │   ├── ceviche.xml
+│   │   ├── com.amazonaws.mobileconnectors.remoteconfiguration.xml
+│   │   ├── com.amazon.cardlib.xml
+│   │   ├── com.amazon.ceviche.xml
+│   │   ├── com.amazon.device.print.xml
+│   │   ├── com.amazon.feature.contextual_screensaver.xml
+│   │   ├── com.amazon.feature.dynamic_key_mapping.xml
+│   │   ├── com.amazon.h2contracts.xml
+│   │   ├── com.amazon.h2shared.xml
+│   │   ├── com.amazon.identity.auth.device.xml
+│   │   ├── com.amazon.media.tv.xml
+│   │   ├── com.amazon.sharingservice.android.client.api.xml
+│   │   ├── com.amazon.sharingservice.android.client.core.lib.xml
+│   │   ├── com.amazon.sics.xml
+│   │   ├── com.amazon.software.fireos.xml
+│   │   ├── com.amazon.sync.api.xml
+│   │   ├── com.amazon.tv.developer.sdk.personalization.xml
+│   │   ├── com.amazon.tv.devicecontrol.xml
+│   │   ├── com.android.location.provider.xml
+│   │   ├── com.android.mediadrm.signer.xml
+│   │   ├── com.android.media.remotedisplay.xml
+│   │   ├── com.google.widevine.software.drm.xml
+│   │   ├── connectivity_manager_api-metadata.xml
+│   │   ├── connectivity_manager_api.xml
+│   │   ├── csf.xml
+│   │   ├── devicedetailslib.xml
+│   │   ├── directtexture_feature.xml
+│   │   ├── eve_feature.xml
+│   │   ├── firetv_sysappslib-metadata.xml
+│   │   ├── firetvsysappslib.xml
+│   │   ├── fosframework-metadata.xml
+│   │   ├── ftvkarmalibrary.xml
+│   │   ├── h2contracts.xml
+│   │   ├── h2shared.xml
+│   │   ├── i18n-metadata.xml
+│   │   ├── inloc_features.xml
+│   │   ├── jackson.xml
+│   │   ├── langpackage_client-api-metadata.xml
+│   │   ├── langpackage-client.xml
+│   │   ├── leakrecovery_feature.xml
+│   │   ├── logd_features.xml
+│   │   ├── mapclientlib.xml
+│   │   ├── media_profiles.xml
+│   │   ├── messaging.xml
+│   │   ├── metrics.xml
+│   │   ├── minerva.xml
+│   │   ├── naatyamlib.xml
+│   │   ├── neoplatformapilibrary.xml
+│   │   ├── ota_contracts.xml
+│   │   ├── perfstats_feature.xml
+│   │   ├── platform.xml
+│   │   ├── precog-api-metadata.xml
+│   │   ├── precog-api.xml
+│   │   ├── prism.xml
+│   │   ├── remote_settings_deprecated.xml
+│   │   ├── retaildemoapi.xml
+│   │   ├── retaildemo.xml
+│   │   ├── rtmpclient.xml
+│   │   ├── sale_service_feature.xml
+│   │   ├── sics.xml
+│   │   ├── tank_features.xml
+│   │   ├── tcomm.xml
+│   │   ├── tv_core_hardware.xml
+│   │   ├── tvextensions.xml
+│   │   ├── webviewext.xml
+│   │   └── whispersync.xml
+│   ├── ping_logger.sh
+│   ├── ppp
+│   │   └── ip-up-vpn
+│   ├── preloaded-classes
+│   ├── privacy_filter.conf
+│   ├── recovery-resource.dat
+│   ├── security
+│   │   ├── cacerts
+│   │   │   ├── 00673b5b.0
+│   │   │   ├── 02b73561.0
+│   │   │   ├── 04f60c28.0
+│   │   │   ├── 052e396b.0
+│   │   │   ├── 08aef7bb.0
+│   │   │   ├── 0d188d89.0
+│   │   │   ├── 0d69c7e1.0
+│   │   │   ├── 10531352.0
+│   │   │   ├── 111e6273.0
+│   │   │   ├── 119afc2e.0
+│   │   │   ├── 124bbd54.0
+│   │   │   ├── 12d55845.0
+│   │   │   ├── 1676090a.0
+│   │   │   ├── 17b51fe6.0
+│   │   │   ├── 1dac3003.0
+│   │   │   ├── 1dcd6f4c.0
+│   │   │   ├── 1df5a75f.0
+│   │   │   ├── 1e1eab7c.0
+│   │   │   ├── 1e8e7201.0
+│   │   │   ├── 1eb37bdf.0
+│   │   │   ├── 1f58a078.0
+│   │   │   ├── 21855f49.0
+│   │   │   ├── 219d9499.0
+│   │   │   ├── 23f4c490.0
+│   │   │   ├── 27af790d.0
+│   │   │   ├── 2add47b6.0
+│   │   │   ├── 2afc57aa.0
+│   │   │   ├── 2d9dafe4.0
+│   │   │   ├── 2fa87019.0
+│   │   │   ├── 2fb1850a.0
+│   │   │   ├── 343eb6cb.0
+│   │   │   ├── 35105088.0
+│   │   │   ├── 399e7759.0
+│   │   │   ├── 3a3b02ce.0
+│   │   │   ├── 3ad48a91.0
+│   │   │   ├── 3c58f906.0
+│   │   │   ├── 3c860d51.0
+│   │   │   ├── 3c9a4d3b.0
+│   │   │   ├── 3d441de8.0
+│   │   │   ├── 3e7271e8.0
+│   │   │   ├── 40dc992e.0
+│   │   │   ├── 418595b9.0
+│   │   │   ├── 450c6e38.0
+│   │   │   ├── 455f1b52.0
+│   │   │   ├── 48a195d8.0
+│   │   │   ├── 4d654d1d.0
+│   │   │   ├── 4e18c148.0
+│   │   │   ├── 4fbd6bfa.0
+│   │   │   ├── 5021a0a2.0
+│   │   │   ├── 5046c355.0
+│   │   │   ├── 524d9b43.0
+│   │   │   ├── 52b525c7.0
+│   │   │   ├── 56b8a0b6.0
+│   │   │   ├── 57692373.0
+│   │   │   ├── 58a44af1.0
+│   │   │   ├── 594f1775.0
+│   │   │   ├── 5a3f0ff8.0
+│   │   │   ├── 5cf9d536.0
+│   │   │   ├── 5e4e69e7.0
+│   │   │   ├── 5f47b495.0
+│   │   │   ├── 60afe812.0
+│   │   │   ├── 6187b673.0
+│   │   │   ├── 63a2c897.0
+│   │   │   ├── 67495436.0
+│   │   │   ├── 69105f4f.0
+│   │   │   ├── 6e8bf996.0
+│   │   │   ├── 6fcc125d.0
+│   │   │   ├── 72f369af.0
+│   │   │   ├── 72fa7371.0
+│   │   │   ├── 74c26bd0.0
+│   │   │   ├── 75680d2e.0
+│   │   │   ├── 7651b327.0
+│   │   │   ├── 76579174.0
+│   │   │   ├── 7672ac4b.0
+│   │   │   ├── 7999be0d.0
+│   │   │   ├── 7a481e66.0
+│   │   │   ├── 7a7c655d.0
+│   │   │   ├── 7a819ef2.0
+│   │   │   ├── 7d3cd826.0
+│   │   │   ├── 7d453d8f.0
+│   │   │   ├── 81b9768f.0
+│   │   │   ├── 82223c44.0
+│   │   │   ├── 8470719d.0
+│   │   │   ├── 84cba82f.0
+│   │   │   ├── 85cde254.0
+│   │   │   ├── 86212b19.0
+│   │   │   ├── 87753b0d.0
+│   │   │   ├── 882de061.0
+│   │   │   ├── 895cad1a.0
+│   │   │   ├── 89c02a45.0
+│   │   │   ├── 8d6437c3.0
+│   │   │   ├── 91739615.0
+│   │   │   ├── 9339512a.0
+│   │   │   ├── 9576d26b.0
+│   │   │   ├── 95aff9e3.0
+│   │   │   ├── 9685a493.0
+│   │   │   ├── 9772ca32.0
+│   │   │   ├── 9ab62355.0
+│   │   │   ├── 9d6523ce.0
+│   │   │   ├── 9dbefe7b.0
+│   │   │   ├── 9f533518.0
+│   │   │   ├── a0bc6fbb.0
+│   │   │   ├── a2c66da8.0
+│   │   │   ├── a2df7ad7.0
+│   │   │   ├── a3896b44.0
+│   │   │   ├── a7605362.0
+│   │   │   ├── a7d2cf64.0
+│   │   │   ├── ab5346f4.0
+│   │   │   ├── add67345.0
+│   │   │   ├── aeb67534.0
+│   │   │   ├── b0ed035a.0
+│   │   │   ├── b0f3e76e.0
+│   │   │   ├── b3fb433b.0
+│   │   │   ├── b7db1890.0
+│   │   │   ├── b872f2b4.0
+│   │   │   ├── b936d1c6.0
+│   │   │   ├── bc3f2570.0
+│   │   │   ├── bda4cc84.0
+│   │   │   ├── bdacca6f.0
+│   │   │   ├── bf64f35b.0
+│   │   │   ├── c33a80d4.0
+│   │   │   ├── c3a6a9ad.0
+│   │   │   ├── c491639e.0
+│   │   │   ├── c51c224c.0
+│   │   │   ├── c527e4ab.0
+│   │   │   ├── c7e2a638.0
+│   │   │   ├── c907e29b.0
+│   │   │   ├── c90bc37d.0
+│   │   │   ├── cb156124.0
+│   │   │   ├── ccc52f49.0
+│   │   │   ├── cdaebb72.0
+│   │   │   ├── cf701eeb.0
+│   │   │   ├── d06393bb.0
+│   │   │   ├── d16a5865.0
+│   │   │   ├── d41b5e2a.0
+│   │   │   ├── d4c339cb.0
+│   │   │   ├── d59297b8.0
+│   │   │   ├── d64f06f3.0
+│   │   │   ├── d66b55d9.0
+│   │   │   ├── d7746a63.0
+│   │   │   ├── dbc54cab.0
+│   │   │   ├── ddc328ff.0
+│   │   │   ├── e268a4c5.0
+│   │   │   ├── e442e424.0
+│   │   │   ├── e48193cf.0
+│   │   │   ├── e60bf0c0.0
+│   │   │   ├── e775ed2d.0
+│   │   │   ├── e7b8d656.0
+│   │   │   ├── e8651083.0
+│   │   │   ├── ea169617.0
+│   │   │   ├── eb375c3e.0
+│   │   │   ├── ed39abd0.0
+│   │   │   ├── ed524cf5.0
+│   │   │   ├── ee7cd6fb.0
+│   │   │   ├── f58a60fe.0
+│   │   │   ├── f61bff45.0
+│   │   │   ├── f80cc7f6.0
+│   │   │   ├── fac084d7.0
+│   │   │   ├── facacbc6.0
+│   │   │   ├── fb126c6d.0
+│   │   │   ├── fb5fa911.0
+│   │   │   ├── fd08c599.0
+│   │   │   ├── fde84897.0
+│   │   │   └── ff783690.0
+│   │   ├── cacerts-sha1
+│   │   │   ├── 02265526.0 -> ../cacerts/455f1b52.0
+│   │   │   ├── 024dc131.0 -> ../cacerts/f61bff45.0
+│   │   │   ├── 034868d6.0 -> ../cacerts/9ab62355.0
+│   │   │   ├── 039c618a.0 -> ../cacerts/56b8a0b6.0
+│   │   │   ├── 062cdee6.0 -> ../cacerts/1e8e7201.0
+│   │   │   ├── 064e0aa9.0 -> ../cacerts/1f58a078.0
+│   │   │   ├── 080911ac.0 -> ../cacerts/5cf9d536.0
+│   │   │   ├── 0810ba98.0 -> ../cacerts/fb126c6d.0
+│   │   │   ├── 09789157.0 -> ../cacerts/10531352.0
+│   │   │   ├── 0b759015.0 -> ../cacerts/0d188d89.0
+│   │   │   ├── 0c4c9b6c.0 -> ../cacerts/9f533518.0
+│   │   │   ├── 106f3e4d.0 -> ../cacerts/b3fb433b.0
+│   │   │   ├── 116bf586.0 -> ../cacerts/27af790d.0
+│   │   │   ├── 128805a3.0 -> ../cacerts/91739615.0
+│   │   │   ├── 157753a5.0 -> ../cacerts/3c58f906.0
+│   │   │   ├── 1636090b.0 -> ../cacerts/40dc992e.0
+│   │   │   ├── 1874d4aa.0 -> ../cacerts/1676090a.0
+│   │   │   ├── 18856ac4.0 -> ../cacerts/ab5346f4.0
+│   │   │   ├── 1d3472b9.0 -> ../cacerts/2add47b6.0
+│   │   │   ├── 1e09d511.0 -> ../cacerts/d06393bb.0
+│   │   │   ├── 1ec4d31a.0 -> ../cacerts/72fa7371.0
+│   │   │   ├── 201cada0.0 -> ../cacerts/2fb1850a.0
+│   │   │   ├── 2251b13a.0 -> ../cacerts/f58a60fe.0
+│   │   │   ├── 244b5494.0 -> ../cacerts/81b9768f.0
+│   │   │   ├── 2ae6433e.0 -> ../cacerts/9576d26b.0
+│   │   │   ├── 2b349938.0 -> ../cacerts/e48193cf.0
+│   │   │   ├── 2c543cd1.0 -> ../cacerts/7999be0d.0
+│   │   │   ├── 2e4eed3c.0 -> ../cacerts/00673b5b.0
+│   │   │   ├── 2e5ac55d.0 -> ../cacerts/12d55845.0
+│   │   │   ├── 349f2832.0 -> ../cacerts/aeb67534.0
+│   │   │   ├── 3513523f.0 -> ../cacerts/399e7759.0
+│   │   │   ├── 381ce4dd.0 -> ../cacerts/ea169617.0
+│   │   │   ├── 3b2716e5.0 -> ../cacerts/f80cc7f6.0
+│   │   │   ├── 3bde41ac.0 -> ../cacerts/d16a5865.0
+│   │   │   ├── 3e45d192.0 -> ../cacerts/9685a493.0
+│   │   │   ├── 3ee7e181.0 -> ../cacerts/58a44af1.0
+│   │   │   ├── 3efd4dc0.0 -> ../cacerts/450c6e38.0
+│   │   │   ├── 4042bcee.0 -> ../cacerts/6187b673.0
+│   │   │   ├── 40547a79.0 -> ../cacerts/5a3f0ff8.0
+│   │   │   ├── 415660c1.0 -> ../cacerts/7651b327.0
+│   │   │   ├── 4304c5e5.0 -> ../cacerts/2fa87019.0
+│   │   │   ├── 442adcac.0 -> ../cacerts/6e8bf996.0
+│   │   │   ├── 480720ec.0 -> ../cacerts/9772ca32.0
+│   │   │   ├── 48bec511.0 -> ../cacerts/95aff9e3.0
+│   │   │   ├── 4a6481c9.0 -> ../cacerts/111e6273.0
+│   │   │   ├── 4bfab552.0 -> ../cacerts/85cde254.0
+│   │   │   ├── 4f316efb.0 -> ../cacerts/3c860d51.0
+│   │   │   ├── 5273a94c.0 -> ../cacerts/cb156124.0
+│   │   │   ├── 5443e9e3.0 -> ../cacerts/1e1eab7c.0
+│   │   │   ├── 54657681.0 -> ../cacerts/82223c44.0
+│   │   │   ├── 5620c4aa.0 -> ../cacerts/7a481e66.0
+│   │   │   ├── 56657bde.0 -> ../cacerts/124bbd54.0
+│   │   │   ├── 578d5c04.0 -> ../cacerts/594f1775.0
+│   │   │   ├── 57bbd831.0 -> ../cacerts/fac084d7.0
+│   │   │   ├── 57bcb2da.0 -> ../cacerts/5046c355.0
+│   │   │   ├── 592c0a9a.0 -> ../cacerts/d66b55d9.0
+│   │   │   ├── 5ad8a5d6.0 -> ../cacerts/b0f3e76e.0
+│   │   │   ├── 5c44d531.0 -> ../cacerts/3d441de8.0
+│   │   │   ├── 5cd81ad7.0 -> ../cacerts/63a2c897.0
+│   │   │   ├── 5f15c80c.0 -> ../cacerts/b0ed035a.0
+│   │   │   ├── 5f267794.0 -> ../cacerts/ed524cf5.0
+│   │   │   ├── 607986c7.0 -> ../cacerts/c90bc37d.0
+│   │   │   ├── 6410666e.0 -> ../cacerts/1dcd6f4c.0
+│   │   │   ├── 653b494a.0 -> ../cacerts/3ad48a91.0
+│   │   │   ├── 65b876bd.0 -> ../cacerts/418595b9.0
+│   │   │   ├── 667c66d4.0 -> ../cacerts/e60bf0c0.0
+│   │   │   ├── 6b99d060.0 -> ../cacerts/bf64f35b.0
+│   │   │   ├── 6cc3c4c3.0 -> ../cacerts/ddc328ff.0
+│   │   │   ├── 6d41d539.0 -> ../cacerts/fb5fa911.0
+│   │   │   ├── 706f604c.0 -> ../cacerts/76579174.0
+│   │   │   ├── 749e9e03.0 -> ../cacerts/52b525c7.0
+│   │   │   ├── 75d1b2ed.0 -> ../cacerts/a2c66da8.0
+│   │   │   ├── 76cb8f92.0 -> ../cacerts/343eb6cb.0
+│   │   │   ├── 76faf6c0.0 -> ../cacerts/9339512a.0
+│   │   │   ├── 778e3cb0.0 -> ../cacerts/4fbd6bfa.0
+│   │   │   ├── 790a7190.0 -> ../cacerts/1dac3003.0
+│   │   │   ├── 79ad8b43.0 -> ../cacerts/e7b8d656.0
+│   │   │   ├── 7d0b38bd.0 -> ../cacerts/5e4e69e7.0
+│   │   │   ├── 7d5a75e4.0 -> ../cacerts/08aef7bb.0
+│   │   │   ├── 7f3d5d1d.0 -> ../cacerts/c491639e.0
+│   │   │   ├── 812e17de.0 -> ../cacerts/4e18c148.0
+│   │   │   ├── 8160b96c.0 -> ../cacerts/e8651083.0
+│   │   │   ├── 861a399d.0 -> ../cacerts/e268a4c5.0
+│   │   │   ├── 8867006a.0 -> ../cacerts/87753b0d.0
+│   │   │   ├── 88f89ea7.0 -> ../cacerts/84cba82f.0
+│   │   │   ├── 8b59b1ad.0 -> ../cacerts/a2df7ad7.0
+│   │   │   ├── 8cb5ee0f.0 -> ../cacerts/7a7c655d.0
+│   │   │   ├── 8d86cdd1.0 -> ../cacerts/882de061.0
+│   │   │   ├── 8e52d3cd.0 -> ../cacerts/eb375c3e.0
+│   │   │   ├── 9007ae68.0 -> ../cacerts/21855f49.0
+│   │   │   ├── 930ac5d2.0 -> ../cacerts/5f47b495.0
+│   │   │   ├── 93bc0acc.0 -> ../cacerts/86212b19.0
+│   │   │   ├── 988a38cb.0 -> ../cacerts/60afe812.0
+│   │   │   ├── 98ec67f0.0 -> ../cacerts/c33a80d4.0
+│   │   │   ├── 9af9f759.0 -> ../cacerts/7d3cd826.0
+│   │   │   ├── 9c2e7d30.0 -> ../cacerts/a7605362.0
+│   │   │   ├── 9c472bf7.0 -> ../cacerts/c3a6a9ad.0
+│   │   │   ├── 9c8dfbd4.0 -> ../cacerts/ccc52f49.0
+│   │   │   ├── 9d04f354.0 -> ../cacerts/8d6437c3.0
+│   │   │   ├── 9d520b32.0 -> ../cacerts/9dbefe7b.0
+│   │   │   ├── a5fd78f0.0 -> ../cacerts/2afc57aa.0
+│   │   │   ├── a760e1bd.0 -> ../cacerts/6fcc125d.0
+│   │   │   ├── a94d09e5.0 -> ../cacerts/3c9a4d3b.0
+│   │   │   ├── ad088e1d.0 -> ../cacerts/e775ed2d.0
+│   │   │   ├── aee5f10d.0 -> ../cacerts/3e7271e8.0
+│   │   │   ├── b0e59380.0 -> ../cacerts/0d69c7e1.0
+│   │   │   ├── b1159c4c.0 -> ../cacerts/69105f4f.0
+│   │   │   ├── b13cc6df.0 -> ../cacerts/ff783690.0
+│   │   │   ├── b1b8a7f3.0 -> ../cacerts/3a3b02ce.0
+│   │   │   ├── b204d74a.0 -> ../cacerts/facacbc6.0
+│   │   │   ├── b42ff584.0 -> ../cacerts/cdaebb72.0
+│   │   │   ├── b66938e9.0 -> ../cacerts/bdacca6f.0
+│   │   │   ├── b6c5745d.0 -> ../cacerts/d64f06f3.0
+│   │   │   ├── b727005e.0 -> ../cacerts/dbc54cab.0
+│   │   │   ├── b7a5b843.0 -> ../cacerts/b7db1890.0
+│   │   │   ├── ba89ed3b.0 -> ../cacerts/67495436.0
+│   │   │   ├── bad35b78.0 -> ../cacerts/c527e4ab.0
+│   │   │   ├── bd1910d4.0 -> ../cacerts/895cad1a.0
+│   │   │   ├── c01cdfa2.0 -> ../cacerts/524d9b43.0
+│   │   │   ├── c089bbbd.0 -> ../cacerts/a7d2cf64.0
+│   │   │   ├── c0ff1f52.0 -> ../cacerts/7d453d8f.0
+│   │   │   ├── c28a8a30.0 -> ../cacerts/1df5a75f.0
+│   │   │   ├── c47d9980.0 -> ../cacerts/1eb37bdf.0
+│   │   │   ├── c692a373.0 -> ../cacerts/4d654d1d.0
+│   │   │   ├── c8841d13.0 -> ../cacerts/5021a0a2.0
+│   │   │   ├── c99398f3.0 -> ../cacerts/8470719d.0
+│   │   │   ├── c9f83a1c.0 -> ../cacerts/02b73561.0
+│   │   │   ├── ca6e4ad9.0 -> ../cacerts/9d6523ce.0
+│   │   │   ├── cb59f961.0 -> ../cacerts/a0bc6fbb.0
+│   │   │   ├── cbeee9e2.0 -> ../cacerts/57692373.0
+│   │   │   ├── cbf06781.0 -> ../cacerts/bc3f2570.0
+│   │   │   ├── cc450945.0 -> ../cacerts/48a195d8.0
+│   │   │   ├── cd58d51e.0 -> ../cacerts/d59297b8.0
+│   │   │   ├── cd8c0d63.0 -> ../cacerts/b936d1c6.0
+│   │   │   ├── ce5e74ef.0 -> ../cacerts/fd08c599.0
+│   │   │   ├── cfa1c2ee.0 -> ../cacerts/72f369af.0
+│   │   │   ├── d4dae3dd.0 -> ../cacerts/d7746a63.0
+│   │   │   ├── d6325660.0 -> ../cacerts/d4c339cb.0
+│   │   │   ├── d7e8dc79.0 -> ../cacerts/7a819ef2.0
+│   │   │   ├── d853d49e.0 -> ../cacerts/c51c224c.0
+│   │   │   ├── d957f522.0 -> ../cacerts/7672ac4b.0
+│   │   │   ├── d9d12c58.0 -> ../cacerts/add67345.0
+│   │   │   ├── dd8e9d41.0 -> ../cacerts/ed39abd0.0
+│   │   │   ├── de6d66f3.0 -> ../cacerts/d41b5e2a.0
+│   │   │   ├── def36a68.0 -> ../cacerts/c907e29b.0
+│   │   │   ├── e113c810.0 -> ../cacerts/fde84897.0
+│   │   │   ├── e18bfb83.0 -> ../cacerts/e442e424.0
+│   │   │   ├── e2799e36.0 -> ../cacerts/c7e2a638.0
+│   │   │   ├── e36a6752.0 -> ../cacerts/b872f2b4.0
+│   │   │   ├── e536d871.0 -> ../cacerts/052e396b.0
+│   │   │   ├── e8de2f56.0 -> ../cacerts/2d9dafe4.0
+│   │   │   ├── eacdeb40.0 -> ../cacerts/bda4cc84.0
+│   │   │   ├── ee64a828.0 -> ../cacerts/75680d2e.0
+│   │   │   ├── eed8c118.0 -> ../cacerts/89c02a45.0
+│   │   │   ├── ef2f636c.0 -> ../cacerts/74c26bd0.0
+│   │   │   ├── f060240e.0 -> ../cacerts/17b51fe6.0
+│   │   │   ├── f081611a.0 -> ../cacerts/219d9499.0
+│   │   │   ├── f30dd6ad.0 -> ../cacerts/04f60c28.0
+│   │   │   ├── f3377b1b.0 -> ../cacerts/a3896b44.0
+│   │   │   ├── f387163d.0 -> ../cacerts/23f4c490.0
+│   │   │   ├── f39fc864.0 -> ../cacerts/cf701eeb.0
+│   │   │   ├── f90208f7.0 -> ../cacerts/ee7cd6fb.0
+│   │   │   ├── fc5a8f99.0 -> ../cacerts/35105088.0
+│   │   │   └── fcac10e3.0 -> ../cacerts/119afc2e.0
+│   │   ├── mac_permissions.xml
+│   │   └── otacerts.zip
+│   ├── syseng.sh
+│   ├── system_fonts_cn.xml
+│   ├── system_fonts_ja.xml
+│   ├── system_fonts.xml
+│   ├── terminfo
+│   │   ├── a
+│   │   │   └── ansi
+│   │   ├── c
+│   │   │   ├── cons25
+│   │   │   └── cygwin
+│   │   ├── d
+│   │   │   └── dumb
+│   │   ├── E
+│   │   │   ├── Eterm
+│   │   │   └── Eterm-color
+│   │   ├── h
+│   │   │   └── hurd
+│   │   ├── l
+│   │   │   └── linux
+│   │   ├── m
+│   │   │   ├── mach
+│   │   │   ├── mach-bold
+│   │   │   └── mach-color
+│   │   ├── p
+│   │   │   └── pcansi
+│   │   ├── r
+│   │   │   ├── rxvt
+│   │   │   └── rxvt-basic
+│   │   ├── s
+│   │   │   ├── screen
+│   │   │   ├── screen-256color
+│   │   │   ├── screen-256color-bce
+│   │   │   ├── screen-bce
+│   │   │   ├── screen-s
+│   │   │   ├── screen-w
+│   │   │   └── sun
+│   │   ├── v
+│   │   │   ├── vt100
+│   │   │   ├── vt102
+│   │   │   ├── vt220
+│   │   │   └── vt52
+│   │   ├── w
+│   │   │   ├── wsvt25
+│   │   │   └── wsvt25m
+│   │   └── x
+│   │       ├── xterm
+│   │       ├── xterm-256color
+│   │       ├── xterm-color
+│   │       ├── xterm-r5
+│   │       ├── xterm-r6
+│   │       ├── xterm-vt220
+│   │       └── xterm-xfree86
+│   ├── wifi
+│   │   ├── p2p_supplicant_overlay.conf
+│   │   ├── wpa_supplicant.conf
+│   │   └── wpa_supplicant_overlay.conf
+│   ├── wifi_log_levels.sh
+│   ├── xlog-filter-default
+│   └── xlog-filter-tags
+├── fonts
+│   ├── Amazon-Ember-BoldItalic.ttf
+│   ├── Amazon-Ember-Bold.ttf
+│   ├── AmazonEmberDisplay_Bd.ttf
+│   ├── AmazonEmberDisplay_He.ttf
+│   ├── AmazonEmberDisplay_Lt.ttf
+│   ├── AmazonEmberDisplay_Md.ttf
+│   ├── AmazonEmberDisplay_Rg.ttf
+│   ├── Amazon-Ember-LightItalic.ttf
+│   ├── Amazon-Ember-Light.ttf
+│   ├── Amazon-Ember-MediumItalic.ttf
+│   ├── Amazon-Ember-Medium.ttf
+│   ├── Amazon-Ember-RegularItalic.ttf
+│   ├── Amazon-Ember-Regular.ttf
+│   ├── Amazon-Ember-ThinItalic.ttf
+│   ├── Amazon-Ember-Thin.ttf
+│   ├── Amazon-Light-BoldItalic.ttf -> Amazon-Ember-RegularItalic.ttf
+│   ├── Amazon-Light-Bold.ttf -> Amazon-Ember-Regular.ttf
+│   ├── Amazon-Light-Italic.ttf -> Amazon-Ember-LightItalic.ttf
+│   ├── Amazon-Light.ttf -> Amazon-Ember-Light.ttf
+│   ├── Amazon-Regular-BoldItalic.ttf -> Amazon-Ember-BoldItalic.ttf
+│   ├── Amazon-Regular-Bold.ttf -> Amazon-Ember-Bold.ttf
+│   ├── Amazon-Regular-Italic.ttf -> Amazon-Ember-RegularItalic.ttf
+│   ├── Amazon-Regular.ttf -> Amazon-Ember-Regular.ttf
+│   ├── Amazon-Thin-BoldItalic.ttf -> Amazon-Ember-RegularItalic.ttf
+│   ├── Amazon-Thin-Bold.ttf -> Amazon-Ember-Regular.ttf
+│   ├── Amazon-Thin-Italic.ttf -> Amazon-Ember-ThinItalic.ttf
+│   ├── Amazon-Thin.ttf -> Amazon-Ember-Thin.ttf
+│   ├── AndroidClock_Highlight.ttf
+│   ├── AndroidClock_Solid.ttf
+│   ├── AndroidClock.ttf
+│   ├── Bookerly-RegularItalic.ttf
+│   ├── CarroisGothicSC-Regular.ttf
+│   ├── Clockopia.ttf
+│   ├── Code2000.ttf
+│   ├── ComingSoon.ttf
+│   ├── CutiveMono.ttf
+│   ├── DancingScript-Bold.ttf
+│   ├── DancingScript-Regular.ttf
+│   ├── DroidSans-Bold.ttf -> Roboto-Bold.ttf
+│   ├── DroidSansFallback.ttf
+│   ├── DroidSansMono.ttf
+│   ├── DroidSans.ttf -> Roboto-Regular.ttf
+│   ├── Kalam-Bold.ttf
+│   ├── Kalam-Light.ttf
+│   ├── Kalam-Regular.ttf
+│   ├── Kindle_Symbol.ttf
+│   ├── MTChineseSurrogates.ttf
+│   ├── MTLmr3m.ttf
+│   ├── NanumGothic.ttf
+│   ├── NotoColorEmoji.ttf
+│   ├── NotoNaskh-Bold.ttf
+│   ├── NotoNaskh-Regular.ttf
+│   ├── NotoNaskhUI-Bold.ttf
+│   ├── NotoNaskhUI-Regular.ttf
+│   ├── NotoSansArmenian-Bold.ttf
+│   ├── NotoSansArmenian-Regular.ttf
+│   ├── NotoSansBengali-Bold.ttf
+│   ├── NotoSansBengali-Regular.ttf
+│   ├── NotoSansBengaliUI-Bold.ttf
+│   ├── NotoSansBengaliUI-Regular.ttf
+│   ├── NotoSansDevanagari-Bold.ttf
+│   ├── NotoSansDevanagari-Regular.ttf
+│   ├── NotoSansDevanagariUI-Bold.ttf
+│   ├── NotoSansDevanagariUI-Regular.ttf
+│   ├── NotoSansEthiopic-Bold.ttf
+│   ├── NotoSansEthiopic-Regular.ttf
+│   ├── NotoSansGeorgian-Bold.ttf
+│   ├── NotoSansGeorgian-Regular.ttf
+│   ├── NotoSansGujarati-Bold.ttf
+│   ├── NotoSansGujarati-Regular.ttf
+│   ├── NotoSansGujaratiUI-Bold.ttf
+│   ├── NotoSansGujaratiUI-Regular.ttf
+│   ├── NotoSansGurmukhi-Bold.ttf
+│   ├── NotoSansGurmukhi-Regular.ttf
+│   ├── NotoSansGurmukhiUI-Bold.ttf
+│   ├── NotoSansGurmukhiUI-Regular.ttf
+│   ├── NotoSansHans-Regular.otf
+│   ├── NotoSansHebrew-Bold.ttf
+│   ├── NotoSansHebrew-Regular.ttf
+│   ├── NotoSansJP-Regular.otf
+│   ├── NotoSansKannada-Bold.ttf
+│   ├── NotoSansKannada-Regular.ttf
+│   ├── NotoSansKannadaUI-Bold.ttf
+│   ├── NotoSansKannadaUI-Regular.ttf
+│   ├── NotoSansKhmer-Bold.ttf
+│   ├── NotoSansKhmer-Regular.ttf
+│   ├── NotoSansKhmerUI-Bold.ttf
+│   ├── NotoSansKhmerUI-Regular.ttf
+│   ├── NotoSansLao-Bold.ttf
+│   ├── NotoSansLao-Regular.ttf
+│   ├── NotoSansLaoUI-Bold.ttf
+│   ├── NotoSansLaoUI-Regular.ttf
+│   ├── NotoSansMalayalam-Bold.ttf
+│   ├── NotoSansMalayalam-Regular.ttf
+│   ├── NotoSansMalayalamUI-Bold.ttf
+│   ├── NotoSansMalayalamUI-Regular.ttf
+│   ├── NotoSansMyanmar-Bold.ttf
+│   ├── NotoSansMyanmar-Regular.ttf
+│   ├── NotoSansMyanmarUI-Bold.ttf
+│   ├── NotoSansMyanmarUI-Regular.ttf
+│   ├── NotoSansOriya-Bold.ttf
+│   ├── NotoSansOriya-Regular.ttf
+│   ├── NotoSansOriyaUI-Bold.ttf
+│   ├── NotoSansOriyaUI-Regular.ttf
+│   ├── NotoSansSinhala-Bold.ttf
+│   ├── NotoSansSinhala-Regular.ttf
+│   ├── NotoSansSymbols-Regular-Subsetted.ttf
+│   ├── NotoSansTamil-Bold.ttf
+│   ├── NotoSansTamil-Regular.ttf
+│   ├── NotoSansTamilUI-Bold.ttf
+│   ├── NotoSansTamilUI-Regular.ttf
+│   ├── NotoSansTelugu-Bold.ttf
+│   ├── NotoSansTelugu-Regular.ttf
+│   ├── NotoSansTeluguUI-Bold.ttf
+│   ├── NotoSansTeluguUI-Regular.ttf
+│   ├── NotoSansThai-Bold.ttf
+│   ├── NotoSansThai-Regular.ttf
+│   ├── NotoSansThaiUI-Bold.ttf
+│   ├── NotoSansThaiUI-Regular.ttf
+│   ├── NotoSerif-BoldItalic.ttf
+│   ├── NotoSerif-Bold.ttf
+│   ├── NotoSerif-Italic.ttf
+│   ├── NotoSerif-Regular.ttf
+│   ├── Roboto-BlackItalic.ttf
+│   ├── Roboto-Black.ttf
+│   ├── Roboto-BoldItalic.ttf
+│   ├── Roboto-Bold.ttf
+│   ├── RobotoCondensed-BoldItalic.ttf
+│   ├── RobotoCondensed-Bold.ttf
+│   ├── RobotoCondensed-Italic.ttf
+│   ├── RobotoCondensed-LightItalic.ttf
+│   ├── RobotoCondensed-Light.ttf
+│   ├── RobotoCondensed-Regular.ttf
+│   ├── Roboto-Italic.ttf
+│   ├── Roboto-LightItalic.ttf
+│   ├── Roboto-Light.ttf
+│   ├── Roboto-MediumItalic.ttf
+│   ├── Roboto-Medium.ttf
+│   ├── Roboto-Regular.ttf
+│   ├── Roboto-ThinItalic.ttf
+│   ├── Roboto-Thin.ttf
+│   ├── SourceCodePro-Medium.ttf
+│   ├── Verdana-BoldItalic.ttf
+│   ├── Verdana-Bold.ttf
+│   ├── Verdana-Italic.ttf
+│   └── Verdana.ttf
+├── framework
+│   ├── amazon-ads-registration.jar
+│   ├── amazoncardlib.jar
+│   ├── amazon.media.tv.dvr.jar
+│   ├── amazon-remoteviews.jar
+│   ├── am.jar
+│   ├── android.amazon.perm
+│   │   └── android.amazon.perm.apk
+│   ├── android-icu4j.jar
+│   ├── android.policy.jar
+│   ├── android.test.runner.jar
+│   ├── apache-xml.jar
+│   ├── appops.jar
+│   ├── appwidget.jar
+│   ├── arm
+│   │   ├── am.odex
+│   │   ├── android.test.runner.odex
+│   │   ├── appops.odex
+│   │   ├── appwidget.odex
+│   │   ├── bmgr.odex
+│   │   ├── boot.art
+│   │   ├── boot.oat
+│   │   ├── bu.odex
+│   │   ├── com.android.future.usb.accessory.odex
+│   │   ├── com.android.location.provider.odex
+│   │   ├── com.android.mediadrm.signer.odex
+│   │   ├── com.android.media.remotedisplay.odex
+│   │   ├── connectivity_manager_api.odex
+│   │   ├── content.odex
+│   │   ├── dpm.odex
+│   │   ├── ethernet-service.odex
+│   │   ├── FireTvSysappsLib.odex
+│   │   ├── fosinit.odex
+│   │   ├── fosservices.odex
+│   │   ├── ime.odex
+│   │   ├── input.odex
+│   │   ├── javax.obex.odex
+│   │   ├── langpackage-client.odex
+│   │   ├── media_cmd.odex
+│   │   ├── monkey.odex
+│   │   ├── neoplatformapilibrary.odex
+│   │   ├── pm.odex
+│   │   ├── precog-api.odex
+│   │   ├── requestsync.odex
+│   │   ├── services.odex
+│   │   ├── settings.odex
+│   │   ├── svc.odex
+│   │   ├── uiautomator.odex
+│   │   ├── wifi-service.odex
+│   │   └── wm.odex
+│   ├── AWSRemoteConfigurationAndroidClient.jar
+│   ├── bmgr.jar
+│   ├── bouncycastle.jar
+│   ├── bu.jar
+│   ├── com.amazon.ceviche.sdk.jar
+│   ├── com.amazon.device.details.lib.jar
+│   ├── com.amazon.device.home.jar
+│   ├── com.amazon.device.print.jar
+│   ├── com.amazon.h2contracts.jar
+│   ├── com.amazon.h2shared.jar
+│   ├── com.amazon.identity.auth.device.jar
+│   ├── com.amazon.media.tv.jar
+│   ├── com.amazon.naatyam.lib.jar
+│   ├── com.amazon.prism.sdk.jar
+│   ├── com.amazon.sharingservice.android.client.core.lib.jar
+│   ├── com.amazon.sharingservice.android.client.jar
+│   ├── com.amazon.sics.jar
+│   ├── com.amazon.sync.api.jar
+│   ├── com.amazon.tv.developer.sdk.personalization.jar
+│   ├── com.amazon.tv.ftvkarmalibrary.jar
+│   ├── com.android.future.usb.accessory.jar
+│   ├── com.android.location.provider.jar
+│   ├── com.android.mediadrm.signer.jar
+│   ├── com.android.media.remotedisplay.jar
+│   ├── com.google.widevine.software.drm.jar
+│   ├── connectivity_manager_api.jar
+│   ├── conscrypt.jar
+│   ├── content.jar
+│   ├── core-junit.jar
+│   ├── core-libart.jar
+│   ├── dolby_ds2.jar
+│   ├── dolby_ds.jar
+│   ├── dpm.jar
+│   ├── ethernet-service.jar
+│   ├── ext.jar
+│   ├── fireos-res
+│   │   ├── arm
+│   │   │   └── fireos-res.odex
+│   │   └── fireos-res.apk
+│   ├── FireTvSysappsLib.jar
+│   ├── fosframework.jar
+│   ├── fosinit.jar
+│   ├── fosservices.jar
+│   ├── framework.jar
+│   ├── framework-res.apk
+│   ├── i18n-utilities.jar
+│   ├── icu4j.jar
+│   ├── ime.jar
+│   ├── ims-common.jar
+│   ├── input.jar
+│   ├── javax.obex.jar
+│   ├── langpackage-client.jar
+│   ├── media_cmd.jar
+│   ├── mms-common.jar
+│   ├── monkey.jar
+│   ├── neoplatformapilibrary.jar
+│   ├── okhttp.jar
+│   ├── pm.jar
+│   ├── precog-api.jar
+│   ├── requestsync.jar
+│   ├── retaildemoapi.jar
+│   ├── rtmpclient.jar
+│   ├── services.jar
+│   ├── settings.jar
+│   ├── svc.jar
+│   ├── telephony-common.jar
+│   ├── uiautomator.jar
+│   ├── voip-common.jar
+│   ├── webviewext.jar
+│   ├── wifi-service.jar
+│   └── wm.jar
+├── lib
+│   ├── crtbegin_so.o
+│   ├── crtend_so.o
+│   ├── drm
+│   │   ├── libdrmplayreadyplugin.so
+│   │   └── libfwdlockengine.so
+│   ├── egl
+│   │   ├── egl.cfg
+│   │   ├── libEGL_mali.so
+│   │   ├── libGLESv1_CM_mali.so
+│   │   └── libGLESv2_mali.so
+│   ├── hw
+│   │   ├── amzn_dha.mt8127.so
+│   │   ├── amzn_drmprov.mt8127.so
+│   │   ├── audio.a2dp.default.so
+│   │   ├── audio.btle.default.so
+│   │   ├── audio_policy.default.so
+│   │   ├── audio_policy.stub.so
+│   │   ├── audio.primary.default.so
+│   │   ├── audio.primary.mt8127.so
+│   │   ├── audio.r_submix.default.so
+│   │   ├── audio.sco.mt8127.so
+│   │   ├── audio.usb.default.so
+│   │   ├── bluetooth.default.so
+│   │   ├── gralloc.default.so
+│   │   ├── gralloc.mt8127.so
+│   │   ├── hdmi_cec.default.so
+│   │   ├── hwcomposer.mt8127.so
+│   │   ├── keystore.default.so
+│   │   ├── keystore.mt8127.so
+│   │   ├── local_time.default.so
+│   │   ├── memtrack.mt8127.so
+│   │   ├── perfboost.default.so
+│   │   ├── power.default.so
+│   │   ├── thermal.mt8127.so
+│   │   ├── tv_input.default.so
+│   │   └── vibrator.default.so
+│   ├── lib3a.so
+│   ├── libaal_cust.so
+│   ├── libaal.so
+│   ├── libacdk.so
+│   ├── libaed.so
+│   ├── libamazondisplayservice.so
+│   ├── libamazoninputservice.so
+│   ├── libamazon_remotes.so
+│   ├── libamazonwifiservice.so
+│   ├── libandroidfw.so
+│   ├── libandroid_runtime.so
+│   ├── libandroid_servers.so
+│   ├── libandroid.so
+│   ├── libart-compiler.so
+│   ├── libart-disassembler.so
+│   ├── libarthook_native.so
+│   ├── libart.so
+│   ├── libatv_uinputbridge.so
+│   ├── libaudiocompensationfilter.so
+│   ├── libaudiocomponentengine.so
+│   ├── libaudiocustparam.so
+│   ├── libaudiodcrflt.so
+│   ├── libaudioeffect_jni.so
+│   ├── libaudioflinger.so
+│   ├── libaudiopolicymanagerdefault.so
+│   ├── libaudiopolicymanager.so
+│   ├── libaudiopolicyservice.so
+│   ├── libaudio-resampler.so
+│   ├── libaudioresampler.so
+│   ├── libaudiosetting.so
+│   ├── libaudiospdif.so
+│   ├── libaudiostream_jni.AMAZON.so -> ./libaudiostream_jni.so
+│   ├── libaudiostream_jni.so
+│   ├── libaudiostream.so
+│   ├── libaudioutils.so
+│   ├── libbacktrace_libc++.so
+│   ├── libbacktrace.so
+│   ├── libbcc.so
+│   ├── libbcinfo.so
+│   ├── libbessound_hd_mtk.so
+│   ├── libbessound_mtk.so
+│   ├── libbinder.so
+│   ├── libblisrc32.so
+│   ├── libblisrc.so
+│   ├── libbluetooth_jni.so
+│   ├── libbtpm_jni.so
+│   ├── libbwc.so
+│   ├── libcamalgo.so
+│   ├── libcam.campipe.so
+│   ├── libcam.camshot.so
+│   ├── libcamdrv.so
+│   ├── libcamera_client_mtk.so
+│   ├── libcamera_client.so
+│   ├── libcameracustom.so
+│   ├── libcamera_metadata.so
+│   ├── libcameraservice.so
+│   ├── libcam.exif.so
+│   ├── libcam_mmp.so
+│   ├── libcam.utils.sensorlistener.so
+│   ├── libcam.utils.so
+│   ├── libcam_utils.so
+│   ├── libcast_bluetooth_2.0.so
+│   ├── libcast_external_audio_pipeline_1.0.so
+│   ├── libcast_shell_android.so
+│   ├── libcjson.so
+│   ├── libclcore.bc
+│   ├── libclcore_debug.bc
+│   ├── libclcore_neon.bc
+│   ├── libcommon_time_client.so
+│   ├── libcompiler_rt.so
+│   ├── libcrashpad_handler.so
+│   ├── libcrypto.so
+│   ├── libc++.so
+│   ├── libc.so
+│   ├── libcurl.so
+│   ├── libcustom_nvram.so
+│   ├── libcutils.so
+│   ├── libcvsd_mtk.so
+│   ├── libdefcontainer_jni.so
+│   ├── libdeviceinfoservice.so
+│   ├── libdiskconfig.so
+│   ├── libdl.so
+│   ├── libdpframework.so
+│   ├── libdrmframework_jni.so
+│   ├── libdrmframework.so
+│   ├── libdrmmtkutil.so
+│   ├── libdrmplayreadydecryptor.so
+│   ├── libeffects.so
+│   ├── libEGL.so
+│   ├── libETC1.so
+│   ├── libexif.so
+│   ├── libexpat.so
+│   ├── libext2_blkid.so
+│   ├── libext2_com_err.so
+│   ├── libext2_e2p.so
+│   ├── libext2fs.so
+│   ├── libext2_profile.so
+│   ├── libext2_quota.so
+│   ├── libext2_uuid.so
+│   ├── libext4_utils.so
+│   ├── libf2fs_sparseblock.so
+│   ├── libfeatureio.so
+│   ├── libFFTEm.so
+│   ├── libfile_op.so
+│   ├── libfilterfw.so
+│   ├── libfilterpack_imageproc.so
+│   ├── libfontconfig.so
+│   ├── libfos_mediacodeclogger_jni.so
+│   ├── libfos_pnf_jni.so
+│   ├── libfoundation-gfx-native-tv.so
+│   ├── libft2.so
+│   ├── libgabi++.so
+│   ├── libgccdemangle.so
+│   ├── libGdmaScalerPipe.so
+│   ├── libGLES_trace.so
+│   ├── libGLESv1_CM.so
+│   ├── libGLESv2.so
+│   ├── libGLESv3.so -> libGLESv2.so
+│   ├── libgnustl_shared.so
+│   ├── libgralloc_extra.so
+│   ├── libgui_ext.so
+│   ├── libgui.so
+│   ├── libhardware_legacy.so
+│   ├── libhardware.so
+│   ├── libharfbuzz_ng.so
+│   ├── libhdmiservice.so
+│   ├── libhdmi.so
+│   ├── libhwm.so
+│   ├── libhwui.so
+│   ├── libi18n-utilities.so
+│   ├── libicui18n.so
+│   ├── libicuuc.so
+│   ├── libimageio_plat_drv.so
+│   ├── libimageio.so
+│   ├── libimg_utils.so
+│   ├── libinlocbtal.so
+│   ├── libinlocclientapi.so
+│   ├── libinlocexternal.so
+│   ├── libinlocipc.so
+│   ├── libinlocmgr.so
+│   ├── libinlocosal.so
+│   ├── libinlocutils.so
+│   ├── libinputflinger.so
+│   ├── libinputservice.so
+│   ├── libinput.so
+│   ├── libion_mtk.so
+│   ├── libion.so
+│   ├── libipcn.so
+│   ├── libiprouteutil.so
+│   ├── libiwnnAmzn.so
+│   ├── libjavacore.so
+│   ├── libjavacrypto.so
+│   ├── libjnigraphics.so
+│   ├── libjni_pacprocessor.so
+│   ├── libjni_pinyinime.so
+│   ├── libjni_pq.so
+│   ├── libjpeg.so
+│   ├── libJpgDecPipe.so
+│   ├── libJpgEncPipe.so
+│   ├── libkeystore_binder.so
+│   ├── libLLVM.so
+│   ├── liblog.so
+│   ├── liblogwrap.so
+│   ├── libm4u.so
+│   ├── libMali.so
+│   ├── libmatv_cust.so
+│   ├── libmdnssd.so
+│   ├── libmediacodeclogger_aidl.so
+│   ├── libmediacodecloggerservice.so
+│   ├── libmediacodeclogger.so
+│   ├── libmediaerrorlogger.so
+│   ├── libmedia_jni.so
+│   ├── libmedialogservice.so
+│   ├── libmediandk.so
+│   ├── libmediaplayerservice.so
+│   ├── libmedia.so
+│   ├── libmemtrack.so
+│   ├── libmhalImageCodec.so
+│   ├── libminikin.so
+│   ├── libmmfactoryutil.so
+│   ├── libmmprofile.so
+│   ├── libmp2dec_sa.ca7.so
+│   ├── libmp2dec_sb.ca7.so
+│   ├── libmp4enc_sa.ca7.so
+│   ├── libmsbc_mtk.so
+│   ├── libm.so
+│   ├── libmtk_drvb.so
+│   ├── libmtkjpeg.so
+│   ├── libmtklimiter.so
+│   ├── libmtk_mali_user.so
+│   ├── libMtkOmxAIVPlayer.so
+│   ├── libMtkOmxCore.so
+│   ├── libMtkOmxMp3Dec.so
+│   ├── libMtkOmxVdec.so
+│   ├── libMtkOmxVenc.so
+│   ├── libmtkshifter.so
+│   ├── libmtp.so
+│   ├── libNativeBinderExtVendor.so
+│   ├── libnativebridge.so
+│   ├── libnativehelper.so
+│   ├── libnbaio.so
+│   ├── libneoserviceapi.so
+│   ├── libnetd_client.so
+│   ├── libnetlink.so
+│   ├── libnetutils.so
+│   ├── libnfc_ndef.so
+│   ├── libnl.so
+│   ├── libnvramagentclient.so
+│   ├── libnvram_daemon_callback.so
+│   ├── libnvram_platform.so
+│   ├── libnvram_sec.so
+│   ├── libnvram.so
+│   ├── libOpenMAXAL.so
+│   ├── libOpenSLES.so
+│   ├── libopuscodec.so
+│   ├── libopus_jni.AMAZON.so -> ./libopus_jni.so
+│   ├── libopus_jni.so
+│   ├── libopus.so
+│   ├── libpac.so
+│   ├── libpcre.so
+│   ├── libpdfium.so
+│   ├── libperfservicenative.so
+│   ├── libperfservice.so
+│   ├── libperfstatsclient.so
+│   ├── libpixelflinger.so
+│   ├── libplayready.so
+│   ├── libpng.so
+│   ├── libpowermanager.so
+│   ├── libpower.so
+│   ├── libPQjni.so
+│   ├── libprocessgroup.so
+│   ├── libqservice.so
+│   ├── libreference-ril.so
+│   ├── libril.so
+│   ├── librilutils.so
+│   ├── libRScpp.so
+│   ├── libRSCpuRef.so
+│   ├── libRSDriver.so
+│   ├── librs_jni.so
+│   ├── libRS.so
+│   ├── librtp_jni.so
+│   ├── libselinux.so
+│   ├── libsensorservice.so
+│   ├── libserviceutility.so
+│   ├── libshowlogo.so
+│   ├── libsics-3.0.200230.0.so
+│   ├── libsigchain.so
+│   ├── libskia.so
+│   ├── libsnappydb-native.so
+│   ├── libsoftkeymaster.so
+│   ├── libsonivox.so
+│   ├── libsoundpool.so
+│   ├── libsoundtriggerservice.so
+│   ├── libsoundtrigger.so
+│   ├── libsparse.so
+│   ├── libspeech_enh_lib.so
+│   ├── libspeexresampler.so
+│   ├── libsqlite_jni.so
+│   ├── libsqlite.so
+│   ├── libssl.so
+│   ├── libstagefright_amrnb_common.so
+│   ├── libstagefright_avc_common.so
+│   ├── libstagefright_enc_common.so
+│   ├── libstagefright_foundation.so
+│   ├── libstagefright_hdcprx.so
+│   ├── libstagefright_httplive.so
+│   ├── libstagefright_http_support.so
+│   ├── libstagefrighthw.so
+│   ├── libstagefright_omx.so
+│   ├── libstagefright.so
+│   ├── libstagefright_soft_aacdec.so
+│   ├── libstagefright_soft_aacenc.so
+│   ├── libstagefright_soft_amrdec.so
+│   ├── libstagefright_soft_amrnbenc.so
+│   ├── libstagefright_soft_flacenc.so
+│   ├── libstagefright_soft_g711dec.so
+│   ├── libstagefright_soft_gsmdec.so
+│   ├── libstagefright_soft_h264dec.so
+│   ├── libstagefright_soft_h264enc.so
+│   ├── libstagefright_soft_hevcdec.so
+│   ├── libstagefright_soft_mp3dec.so
+│   ├── libstagefright_soft_mpeg4dec.so
+│   ├── libstagefright_soft_mpeg4enc.so
+│   ├── libstagefright_soft_opusdec.so
+│   ├── libstagefright_soft_rawdec.so
+│   ├── libstagefright_soft_vorbisdec.so
+│   ├── libstagefright_soft_vpxdec.so
+│   ├── libstagefright_soft_vpxenc.so
+│   ├── libstagefright_wfd.so
+│   ├── libstagefright_yuv.so
+│   ├── libstdc++.so
+│   ├── libstlport.so
+│   ├── libsurfaceflinger_ddmconnection.so
+│   ├── libsurfaceflinger.so
+│   ├── libsuspend.so
+│   ├── libSwJpgCodec.so
+│   ├── libsync.so
+│   ├── libsysutils.so
+│   ├── libthermalservice.so
+│   ├── libtinyalsa.so
+│   ├── libtinycompress.so
+│   ├── libtinyxml.so
+│   ├── libtoe.so
+│   ├── libtrapz.so
+│   ├── libttscompat.so
+│   ├── libttspico.so
+│   ├── libtz_uree.so
+│   ├── libui.so
+│   ├── libunwind-ptrace.so
+│   ├── libunwind.so
+│   ├── liburee_fps.so
+│   ├── liburee_meta_drmkeyinstall_v2.so
+│   ├── lib_uree_mtk_crypto.so
+│   ├── lib_uree_mtk_modular_drm.so
+│   ├── lib_uree_mtk_video_secure_al.so
+│   ├── libusbhost.so
+│   ├── libusb.so
+│   ├── libutils.so
+│   ├── libvariablespeed.so
+│   ├── libvc1dec_sa.ca7.so
+│   ├── libvcodecdrv.so
+│   ├── libvcodec_oal.so
+│   ├── libvcodec_utility.so
+│   ├── libvixl.so
+│   ├── libvorbisidec.so
+│   ├── libvp8dec_sa.ca7.so
+│   ├── libvp9dec_sa.ca7.so
+│   ├── libwebrtc_audio_preprocessing.so
+│   ├── libwebviewchromium_loader.so
+│   ├── libwebviewchromium_plat_support.so
+│   ├── libwebviewextchromium.so
+│   ├── libwifidiags_jniwrapper.so
+│   ├── libwifidiags.so
+│   ├── libwifi-service.so
+│   ├── libwilhelm.so
+│   ├── libwlfAmzn.so
+│   ├── libwlm.so
+│   ├── libWnnWrapper.so
+│   ├── libwpa_client.so
+│   ├── libz.so
+│   ├── modules
+│   │   ├── bcmdhd.ko
+│   │   ├── ozwpan.ko
+│   │   └── perfinfo.ko
+│   ├── soundfx
+│   │   ├── libaudiopreprocessing.so
+│   │   ├── libbundlewrapper.so
+│   │   ├── libdownmix.so
+│   │   ├── libeffectproxy.so
+│   │   ├── libldnhncr.so
+│   │   ├── libreverbwrapper.so
+│   │   └── libvisualizer.so
+│   └── ssl
+│       └── engines
+│           └── libkeystore.so
+├── lost+found
+├── media
+│   ├── audio
+│   │   ├── notifications
+│   │   │   └── Voila.ogg
+│   │   └── ui
+│   │       ├── camera_click.ogg
+│   │       ├── camera_focus.ogg
+│   │       ├── Dock.ogg
+│   │       ├── Effect_Tick.ogg
+│   │       ├── KeypressDelete.ogg
+│   │       ├── KeypressInvalid.ogg
+│   │       ├── KeypressReturn.ogg
+│   │       ├── KeypressSpacebar.ogg
+│   │       ├── KeypressStandard.ogg
+│   │       ├── Undock.ogg
+│   │       └── VideoRecord.ogg
+│   └── bootanimation.zip
+├── priv-app
+│   ├── amazon.jackson-19
+│   │   └── amazon.jackson-19.apk
+│   ├── AmazonKKWebViewLib
+│   │   └── AmazonKKWebViewLib.apk
+│   ├── AmazonNetworkMonitor
+│   │   ├── AmazonNetworkMonitor.apk
+│   │   └── arm
+│   │       └── AmazonNetworkMonitor.odex
+│   ├── AmazonUsageStatsListener
+│   │   ├── AmazonUsageStatsListener.apk
+│   │   └── arm
+│   │       └── AmazonUsageStatsListener.odex
+│   ├── Android.mk
+│   ├── AtvRemoteService
+│   │   └── AtvRemoteService.apk
+│   ├── AutoPairService
+│   │   └── AutoPairService.apk
+│   ├── BackupRestoreConfirmation
+│   │   ├── arm
+│   │   │   └── BackupRestoreConfirmation.odex
+│   │   └── BackupRestoreConfirmation.apk
+│   ├── BluetoothInternals
+│   │   ├── arm
+│   │   │   └── BluetoothInternals.odex
+│   │   └── BluetoothInternals.apk
+│   ├── BluetoothKeyMapLib
+│   │   └── BluetoothKeyMapLib.apk
+│   ├── CaptivePortalLauncher
+│   │   └── CaptivePortalLauncher.apk
+│   ├── com.amazon.aca
+│   │   └── com.amazon.aca.apk
+│   ├── com.amazon.adep
+│   │   ├── com.amazon.adep.apk
+│   │   └── lib
+│   │       └── arm
+│   │           └── libcheckFileExistNative.so
+│   ├── com.amazon.aiondec-stub
+│   │   └── com.amazon.aiondec-stub.apk
+│   ├── com.amazon.ale
+│   │   └── com.amazon.ale.apk
+│   ├── com.amazon.alexa.datastore.app-stub
+│   │   └── com.amazon.alexa.datastore.app-stub.apk
+│   ├── com.amazon.alexamediaplayer.runtime.ftv-stub
+│   │   └── com.amazon.alexamediaplayer.runtime.ftv-stub.apk
+│   ├── com.amazon.alexashopping
+│   │   ├── com.amazon.alexashopping.apk
+│   │   └── lib
+│   │       └── arm
+│   │           ├── libimagepipeline.so
+│   │           └── libreactnativejni.so
+│   ├── com.amazon.appaccesskeyprovider
+│   │   └── com.amazon.appaccesskeyprovider.apk
+│   ├── com.amazon.aria
+│   │   ├── com.amazon.aria.apk
+│   │   └── lib
+│   │       └── arm
+│   │           ├── libapl-jni.so
+│   │           ├── libcommon-jni.so
+│   │           ├── libdiscovery-jni.so
+│   │           ├── librsjni_androidx.so
+│   │           ├── librsjni.so
+│   │           └── libRSSupport.so
+│   ├── com.amazon.assetsync.service
+│   │   └── com.amazon.assetsync.service.apk
+│   ├── com.amazon.avl.firetv
+│   │   └── com.amazon.avl.firetv.apk
+│   ├── com.amazon.avod
+│   │   ├── com.amazon.avod.apk
+│   │   └── lib
+│   │       └── arm
+│   │           ├── libAIVDash.so
+│   │           ├── libAIVHeuristics.so
+│   │           ├── libAIVMemoryAllocator.so
+│   │           ├── libAIVSecureRenderer.so
+│   │           ├── libATVPlaybackSmoothStream.so
+│   │           └── libsyendk.so
+│   ├── com.amazon.bueller.music-stub
+│   │   └── com.amazon.bueller.music-stub.apk
+│   ├── com.amazon.bueller.photos
+│   │   ├── com.amazon.bueller.photos.apk
+│   │   └── lib
+│   │       └── arm
+│   │           └── libfoundation-gfx-native-tv.so -> /system/lib/libfoundation-gfx-native-tv.so
+│   ├── com.amazon.cardinal
+│   │   ├── com.amazon.cardinal.apk
+│   │   └── lib
+│   │       └── arm
+│   │           └── libjingle_peerconnection_so.so
+│   ├── com.amazon.ceviche
+│   │   └── com.amazon.ceviche.apk
+│   ├── com.amazon.cloud9-stub
+│   │   └── com.amazon.cloud9-stub.apk
+│   ├── com.amazon.communication
+│   │   └── com.amazon.communication.apk
+│   ├── com.amazon.communication.discovery
+│   │   └── com.amazon.communication.discovery.apk
+│   ├── com.amazon.csm.htmlruntime-stub
+│   │   └── com.amazon.csm.htmlruntime-stub.apk
+│   ├── com.amazon.device.blepa
+│   │   └── com.amazon.device.blepa.apk
+│   ├── com.amazon.device.bluetoothpa
+│   │   └── com.amazon.device.bluetoothpa.apk
+│   ├── com.amazon.device.details
+│   │   └── com.amazon.device.details.apk
+│   ├── com.amazon.device.sync
+│   │   └── com.amazon.device.sync.apk
+│   ├── com.amazon.device.sync.sdk.internal
+│   │   └── com.amazon.device.sync.sdk.internal.apk
+│   ├── com.amazon.diode
+│   │   └── com.amazon.diode.apk
+│   ├── com.amazon.dpcclient
+│   │   └── com.amazon.dpcclient.apk
+│   ├── com.amazon.dp.logger
+│   │   └── com.amazon.dp.logger.apk
+│   ├── com.amazon.firebat
+│   │   └── com.amazon.firebat.apk
+│   ├── com.amazon.firehomestarter
+│   │   └── com.amazon.firehomestarter.apk
+│   ├── com.amazon.fireinputdevices
+│   │   └── com.amazon.fireinputdevices.apk
+│   ├── com.amazon.firerestapiframework
+│   │   └── com.amazon.firerestapiframework.apk
+│   ├── com.amazon.franktvinput
+│   │   └── com.amazon.franktvinput.apk
+│   ├── com.amazon.ftvads.deeplinking
+│   │   └── com.amazon.ftvads.deeplinking.apk
+│   ├── com.amazon.ftv.profilepicker
+│   │   └── com.amazon.ftv.profilepicker.apk
+│   ├── com.amazon.ftv.screensaver
+│   │   └── com.amazon.ftv.screensaver.apk
+│   ├── com.amazon.ftv.xpicker
+│   │   └── com.amazon.ftv.xpicker.apk
+│   ├── com.amazon.gamehub
+│   │   └── com.amazon.gamehub.apk
+│   ├── com.amazon.gloria.graphiq
+│   │   ├── com.amazon.gloria.graphiq.apk
+│   │   └── lib
+│   │       └── arm
+│   │           └── libhyphen_jni.so
+│   ├── com.amazon.h2clientservice
+│   │   └── com.amazon.h2clientservice.apk
+│   ├── com.amazon.hedwig-stub
+│   │   └── com.amazon.hedwig-stub.apk
+│   ├── com.amazon.identity.auth.device.authorization
+│   │   └── com.amazon.identity.auth.device.authorization.apk
+│   ├── com.amazon.imdb.tv.android.app
+│   │   └── com.amazon.imdb.tv.android.app.apk
+│   ├── com.amazon.imp
+│   │   └── com.amazon.imp.apk
+│   ├── com.amazon.katoch
+│   │   └── com.amazon.katoch.apk
+│   ├── com.amazon.kindleautomatictimezone
+│   │   └── com.amazon.kindleautomatictimezone.apk
+│   ├── com.amazon.kor.demo
+│   │   └── com.amazon.kor.demo.apk
+│   ├── com.amazon.kso.blackbird
+│   │   └── com.amazon.kso.blackbird.apk
+│   ├── com.amazon.malcolm
+│   │   └── com.amazon.malcolm.apk
+│   ├── com.amazon.metrics.api
+│   │   └── com.amazon.metrics.api.apk
+│   ├── com.amazon.minitv.android.app-stub
+│   │   └── com.amazon.minitv.android.app-stub.apk
+│   ├── com.amazon.naatyam
+│   │   └── com.amazon.naatyam.apk
+│   ├── com.amazon.neo.delegateservice
+│   │   └── com.amazon.neo.delegateservice.apk
+│   ├── com.amazon.net.smartconnect
+│   │   └── com.amazon.net.smartconnect.apk
+│   ├── com.amazon.ods.kindleconnect
+│   │   └── com.amazon.ods.kindleconnect.apk
+│   ├── com.amazon.perfcollection
+│   │   └── com.amazon.perfcollection.apk
+│   ├── com.amazon.prism.android.service
+│   │   └── com.amazon.prism.android.service.apk
+│   ├── com.amazon.providers.tv
+│   │   └── com.amazon.providers.tv.apk
+│   ├── com.amazon.securitysyncclient
+│   │   └── com.amazon.securitysyncclient.apk
+│   ├── com.amazon.sharingservice.android.client.proxy.release
+│   │   └── com.amazon.sharingservice.android.client.proxy.release.apk
+│   ├── com.amazon.shoptv.client
+│   │   └── com.amazon.shoptv.client.apk
+│   ├── com.amazon.shoptv.firetv.client
+│   │   └── com.amazon.shoptv.firetv.client.apk
+│   ├── com.amazon.storm.lightning.services
+│   │   ├── com.amazon.storm.lightning.services.apk
+│   │   └── lib
+│   │       └── arm
+│   │           ├── libLightningAndroid.so
+│   │           └── libLightning.so
+│   ├── com.amazon.storm.lightning.tutorial
+│   │   └── com.amazon.storm.lightning.tutorial.apk
+│   ├── com.amazon.tahoe
+│   │   ├── com.amazon.tahoe.apk
+│   │   └── lib
+│   │       └── arm
+│   │           └── libsnappydb-native.so -> /system/lib/libsnappydb-native.so
+│   ├── com.amazon.tcomm
+│   │   └── com.amazon.tcomm.apk
+│   ├── com.amazon.tcomm.jackson
+│   │   └── com.amazon.tcomm.jackson.apk
+│   ├── com.amazon.tmm.tutorial
+│   │   └── com.amazon.tmm.tutorial.apk
+│   ├── com.amazon.tv.aiv.support
+│   │   └── com.amazon.tv.aiv.support.apk
+│   ├── com.amazon.tv.alexaalerts
+│   │   └── com.amazon.tv.alexaalerts.apk
+│   ├── com.amazon.tv.alexanotifications
+│   │   └── com.amazon.tv.alexanotifications.apk
+│   ├── com.amazon.tv.arc
+│   │   └── com.amazon.tv.arc.apk
+│   ├── com.amazon.tv.csapp
+│   │   └── com.amazon.tv.csapp.apk
+│   ├── com.amazon.tv.developer.dataservice
+│   │   └── com.amazon.tv.developer.dataservice.apk
+│   ├── com.amazon.tv.devicecontrol
+│   │   └── com.amazon.tv.devicecontrol.apk
+│   ├── com.amazon.tv.devicecontrolsettings
+│   │   └── com.amazon.tv.devicecontrolsettings.apk
+│   ├── com.amazon.tv.easyupgrade
+│   │   └── com.amazon.tv.easyupgrade.apk
+│   ├── com.amazon.tv.ffsprovisioneeclient
+│   │   └── com.amazon.tv.ffsprovisioneeclient.apk
+│   ├── com.amazon.tv.forcedotaupdater.v2
+│   │   └── com.amazon.tv.forcedotaupdater.v2.apk
+│   ├── com.amazon.tv.ime
+│   │   └── com.amazon.tv.ime.apk
+│   ├── com.amazon.tv.launcher
+│   │   └── com.amazon.tv.launcher.apk
+│   ├── com.amazon.tv.legal.notices
+│   │   └── com.amazon.tv.legal.notices.apk
+│   ├── com.amazon.tv.livetv
+│   │   └── com.amazon.tv.livetv.apk
+│   ├── com.amazon.tv.notificationcenter
+│   │   └── com.amazon.tv.notificationcenter.apk
+│   ├── com.amazon.tv.oobe
+│   │   └── com.amazon.tv.oobe.apk
+│   ├── com.amazon.tv.ottssocompanionapp
+│   │   └── com.amazon.tv.ottssocompanionapp.apk
+│   ├── com.amazon.tv.ottssolib
+│   │   └── com.amazon.tv.ottssolib.apk
+│   ├── com.amazon.tv.parentalcontrols
+│   │   └── com.amazon.tv.parentalcontrols.apk
+│   ├── com.amazon.tv.releasenotes
+│   │   └── com.amazon.tv.releasenotes.apk
+│   ├── com.amazon.tv.routing
+│   │   └── com.amazon.tv.routing.apk
+│   ├── com.amazon.tv.sc
+│   │   └── com.amazon.tv.sc.apk
+│   ├── com.amazon.tv.settings.core
+│   │   └── com.amazon.tv.settings.core.apk
+│   ├── com.amazon.tv.settings.v2
+│   │   └── com.amazon.tv.settings.v2.apk
+│   ├── com.amazon.tv.turnstile
+│   │   └── com.amazon.tv.turnstile.apk
+│   ├── com.amazon.tv.website_launcher
+│   │   └── com.amazon.tv.website_launcher.apk
+│   ├── com.amazon.venezia
+│   │   └── com.amazon.venezia.apk
+│   ├── com.amazon.vizzini
+│   │   ├── com.amazon.vizzini.apk
+│   │   └── lib
+│   │       └── arm
+│   │           ├── libACL_csm.so
+│   │           ├── libACL_jni.so
+│   │           ├── libacsdkCrypto_csm.so
+│   │           ├── libacsdkCryptoInterfaces_csm.so
+│   │           ├── libacsdkLocalExecutionFlowLite_csm.so
+│   │           ├── libacsdkNotifier_csm.so
+│   │           ├── libacsdkUserPerceivedFatalsClient_csm.so
+│   │           ├── libacsdkUserPerceivedFatals_csm.so
+│   │           ├── libahe_router_integration_csm.so
+│   │           ├── libAndroidUtilities_csm.so
+│   │           ├── libavcodec.so
+│   │           ├── libavresample.so
+│   │           ├── libAVSCommon_csm.so
+│   │           ├── libAVSCommon_jni.so
+│   │           ├── libAVSJniPlatform_jni.so
+│   │           ├── libavutil.so
+│   │           ├── libblueshift-audioprocessing.so
+│   │           ├── libblueshift-opus.so
+│   │           ├── libContextManager_csm.so
+│   │           ├── libcrypto-avs.so
+│   │           ├── libc++_shared.so
+│   │           ├── libcurl.so
+│   │           ├── libffmpeg.so
+│   │           ├── libhr-integration_csm.so
+│   │           ├── libHybridRouter_jni.so
+│   │           ├── libnativesocket_csm_jni.so
+│   │           ├── libnghttp2.so
+│   │           ├── libogg_csm.so
+│   │           ├── libopus_csm.so
+│   │           ├── libopusenc.so
+│   │           ├── libspotify_embedded_shared.so
+│   │           ├── libspotify-jni.so
+│   │           ├── libssl-avs.so
+│   │           ├── libswresample.so
+│   │           ├── libtcomm.so
+│   │           ├── libwakewordmanageraudiostream.so
+│   │           └── libwakewordmanager.so
+│   ├── com.amazon.wha.mediabrowserservice-stub
+│   │   └── com.amazon.wha.mediabrowserservice-stub.apk
+│   ├── com.amazon.whisperjoin.middleware.np
+│   │   └── com.amazon.whisperjoin.middleware.np.apk
+│   ├── com.amazon.whisperjoin.wss.wifiprovisioner
+│   │   └── com.amazon.whisperjoin.wss.wifiprovisioner.apk
+│   ├── com.amznfuse.operatorredirection
+│   │   └── com.amznfuse.operatorredirection.apk
+│   ├── com.imdb.livingroom.firetv
+│   │   └── com.imdb.livingroom.firetv.apk
+│   ├── ConnectivityControllerService
+│   │   └── ConnectivityControllerService.apk
+│   ├── ConnectivityDiag
+│   │   ├── arm
+│   │   │   └── ConnectivityDiag.odex
+│   │   └── ConnectivityDiag.apk
+│   ├── ContentSupportProvider
+│   │   ├── arm
+│   │   │   └── ContentSupportProvider.odex
+│   │   └── ContentSupportProvider.apk
+│   ├── CrashManager
+│   │   └── CrashManager.apk
+│   ├── CredentialLockerAndroid-tablet-release
+│   │   └── CredentialLockerAndroid-tablet-release.apk
+│   ├── CredentialStorage
+│   │   ├── arm
+│   │   │   └── CredentialStorage.odex
+│   │   └── CredentialStorage.apk
+│   ├── DefaultContainerService
+│   │   ├── arm
+│   │   │   └── DefaultContainerService.odex
+│   │   ├── DefaultContainerService.apk
+│   │   └── lib
+│   │       └── arm
+│   │           └── libdefcontainer_jni.so -> /system/lib/libdefcontainer_jni.so
+│   ├── DeviceClientPlatformContractsFramework
+│   │   └── DeviceClientPlatformContractsFramework.apk
+│   ├── DeviceMessagingAndroid
+│   │   └── DeviceMessagingAndroid.apk
+│   ├── DeviceMessagingAndroidInternalSDK
+│   │   └── DeviceMessagingAndroidInternalSDK.apk
+│   ├── DeviceMessagingAndroidSDK
+│   │   └── DeviceMessagingAndroidSDK.apk
+│   ├── DeviceSoftwareOTA
+│   │   └── DeviceSoftwareOTA.apk
+│   ├── DeviceSoftwareOTAContracts
+│   │   └── DeviceSoftwareOTAContracts.apk
+│   ├── DeviceSoftwareOTAIdleOverride
+│   │   └── DeviceSoftwareOTAIdleOverride.apk
+│   ├── DialService
+│   │   └── DialService.apk
+│   ├── DownloadProvider
+│   │   ├── arm
+│   │   │   └── DownloadProvider.odex
+│   │   └── DownloadProvider.apk
+│   ├── DownloadProviderUi
+│   │   ├── arm
+│   │   │   └── DownloadProviderUi.odex
+│   │   └── DownloadProviderUi.apk
+│   ├── ExternalStorageProvider
+│   │   ├── arm
+│   │   │   └── ExternalStorageProvider.odex
+│   │   └── ExternalStorageProvider.apk
+│   ├── FireApplicationCompatibilityEnforcer
+│   │   └── FireApplicationCompatibilityEnforcer.apk
+│   ├── FireApplicationCompatibilityEnforcerSDK
+│   │   └── FireApplicationCompatibilityEnforcerSDK.apk
+│   ├── FireOsMiddlewareDebugApp
+│   │   └── FireOsMiddlewareDebugApp.apk
+│   ├── FireRecessProxy
+│   │   └── FireRecessProxy.apk
+│   ├── FireTVDefaultMediaReceiver
+│   │   └── FireTVDefaultMediaReceiver.apk
+│   ├── FireTvNotificationService
+│   │   ├── arm
+│   │   │   └── FireTvNotificationService.odex
+│   │   └── FireTvNotificationService.apk
+│   ├── FireTvSaleService
+│   │   ├── arm
+│   │   │   └── FireTvSaleService.odex
+│   │   └── FireTvSaleService.apk
+│   ├── FireTVSystemUI
+│   │   ├── arm
+│   │   │   └── FireTVSystemUI.odex
+│   │   └── FireTVSystemUI.apk
+│   ├── FusedLocation
+│   │   ├── arm
+│   │   │   └── FusedLocation.odex
+│   │   └── FusedLocation.apk
+│   ├── GlobalKeyInterceptor
+│   │   └── GlobalKeyInterceptor.apk
+│   ├── IvonaTTS
+│   │   ├── IvonaTTS.apk
+│   │   └── lib
+│   │       └── arm
+│   │           ├── libc++_shared.so
+│   │           └── libttsivona.so
+│   ├── IvonaTtsOrchestrator
+│   │   ├── arm
+│   │   │   └── IvonaTtsOrchestrator.odex
+│   │   └── IvonaTtsOrchestrator.apk
+│   ├── LeanbackIme
+│   │   └── LeanbackIme.apk
+│   ├── LeanbackLauncher
+│   │   └── LeanbackLauncher.apk
+│   ├── logan
+│   │   └── logan.apk
+│   ├── LogManager-logd
+│   │   └── LogManager-logd.apk
+│   ├── ManagedProvisioning
+│   │   ├── arm
+│   │   │   └── ManagedProvisioning.odex
+│   │   └── ManagedProvisioning.apk
+│   ├── marketplace_service_receiver
+│   │   ├── arm
+│   │   │   └── marketplace_service_receiver.odex
+│   │   └── marketplace_service_receiver.apk
+│   ├── MediaProvider
+│   │   ├── arm
+│   │   │   └── MediaProvider.odex
+│   │   └── MediaProvider.apk
+│   ├── MetricsApi
+│   │   └── MetricsApi.apk
+│   ├── MetricsService
+│   │   └── MetricsService.apk
+│   ├── MinervaApi
+│   │   └── MinervaApi.apk
+│   ├── OneTimeInitializer
+│   │   ├── arm
+│   │   │   └── OneTimeInitializer.odex
+│   │   └── OneTimeInitializer.apk
+│   ├── Overscan
+│   │   └── Overscan.apk
+│   ├── PackageInstaller
+│   │   ├── arm
+│   │   │   └── PackageInstaller.odex
+│   │   └── PackageInstaller.apk
+│   ├── ProxyHandler
+│   │   ├── arm
+│   │   │   └── ProxyHandler.odex
+│   │   └── ProxyHandler.apk
+│   ├── RemoteDeviceManagerApplication
+│   │   └── RemoteDeviceManagerApplication.apk
+│   ├── RemoteSettingsAndroid
+│   │   └── RemoteSettingsAndroid.apk
+│   ├── RemoteSettingsInternalSDK
+│   │   └── RemoteSettingsInternalSDK.apk
+│   ├── SettingsProvider
+│   │   ├── arm
+│   │   │   └── SettingsProvider.odex
+│   │   └── SettingsProvider.apk
+│   ├── SharedStorageBackup
+│   │   ├── arm
+│   │   │   └── SharedStorageBackup.odex
+│   │   └── SharedStorageBackup.apk
+│   ├── Shell
+│   │   ├── arm
+│   │   │   └── Shell.odex
+│   │   └── Shell.apk
+│   ├── SsdpService
+│   │   └── SsdpService.apk
+│   ├── sync-provider_ipc-tv-release
+│   │   └── sync-provider_ipc-tv-release.apk
+│   ├── sync-service-fireos-tv-release
+│   │   └── sync-service-fireos-tv-release.apk
+│   ├── SystemStatusMonitor
+│   │   ├── arm
+│   │   │   └── SystemStatusMonitor.odex
+│   │   └── SystemStatusMonitor.apk
+│   ├── SystemStatusMonitorSys
+│   │   ├── arm
+│   │   │   └── SystemStatusMonitorSys.odex
+│   │   └── SystemStatusMonitorSys.apk
+│   ├── TIFObserverService
+│   │   ├── arm
+│   │   │   └── TIFObserverService.odex
+│   │   └── TIFObserverService.apk
+│   ├── TvProvider
+│   │   ├── arm
+│   │   │   └── TvProvider.odex
+│   │   └── TvProvider.apk
+│   ├── UXControllerService
+│   │   └── UXControllerService.apk
+│   ├── UXNotificationService
+│   │   └── UXNotificationService.apk
+│   ├── VpnDialogs
+│   │   ├── arm
+│   │   │   └── VpnDialogs.odex
+│   │   └── VpnDialogs.apk
+│   ├── WallpaperCropper
+│   │   ├── arm
+│   │   │   └── WallpaperCropper.odex
+│   │   └── WallpaperCropper.apk
+│   ├── WhispercastConnect
+│   │   ├── arm
+│   │   │   └── WhispercastConnect.odex
+│   │   └── WhispercastConnect.apk
+│   ├── WhisperlinkSdk
+│   │   └── WhisperlinkSdk.apk
+│   ├── WhisperplayCore
+│   │   └── WhisperplayCore.apk
+│   └── WhisperplayInstall
+│       └── WhisperplayInstall.apk
+├── recovery-from-boot.p
+├── res
+│   ├── images
+│   │   ├── lcd_test_00.png
+│   │   ├── lcd_test_01.png
+│   │   └── lcd_test_02.png
+│   └── sound
+│       ├── ringtone.wav
+│       └── testpattern1.wav
+├── security
+│   └── crl
+│       └── crlset_default
+├── system_extarct_tree.txt
+├── tts
+│   └── lang_pico
+│       ├── de-DE_gl0_sg.bin
+│       ├── de-DE_ta.bin
+│       ├── en-GB_kh0_sg.bin
+│       ├── en-GB_ta.bin
+│       ├── en-US_lh0_sg.bin
+│       └── en-US_ta.bin
+├── usr
+│   ├── icu
+│   │   └── icudt53l.dat
+│   ├── idc
+│   │   ├── amazon_touch.idc
+│   │   ├── lightning-device.idc
+│   │   ├── qwerty2.idc
+│   │   └── qwerty.idc
+│   ├── keychars
+│   │   ├── Generic.kcm
+│   │   ├── lightning-device.kcm
+│   │   ├── qwerty2.kcm
+│   │   ├── qwerty.kcm
+│   │   └── Virtual.kcm
+│   ├── keylayout
+│   │   ├── ACCDET.kl
+│   │   ├── AVRCP.kl
+│   │   ├── Generic.kl
+│   │   ├── lightning-device.kl
+│   │   ├── qwerty.kl
+│   │   ├── Vendor_0079_Product_0011.kl
+│   │   ├── Vendor_0111_Product_1431.kl
+│   │   ├── Vendor_0171_Product_0413.kl
+│   │   ├── Vendor_0171_Product_0419.kl
+│   │   ├── Vendor_0171_Product_041c.kl
+│   │   ├── Vendor_0171_Product_041e.kl
+│   │   ├── Vendor_0171_Product_0420.kl
+│   │   ├── Vendor_0171_Product_0421.kl
+│   │   ├── Vendor_0171_Product_0425.kl
+│   │   ├── Vendor_045e_Product_028e.kl
+│   │   ├── Vendor_045e_Product_0291.kl
+│   │   ├── Vendor_045e_Product_02fd.kl
+│   │   ├── Vendor_045e_Product_0719.kl
+│   │   ├── Vendor_045e_Product_0b13.kl
+│   │   ├── Vendor_046d_Product_b501.kl
+│   │   ├── Vendor_046d_Product_c216.kl
+│   │   ├── Vendor_046d_Product_c219.kl
+│   │   ├── Vendor_046d_Product_c21d.kl
+│   │   ├── Vendor_046d_Product_c21e.kl
+│   │   ├── Vendor_046d_Product_c21f.kl
+│   │   ├── Vendor_046d_Product_c294.kl
+│   │   ├── Vendor_046d_Product_c299.kl
+│   │   ├── Vendor_046d_Product_c532.kl
+│   │   ├── Vendor_054c_Product_0268.kl
+│   │   ├── Vendor_054c_Product_05c4.kl
+│   │   ├── Vendor_054c_Product_09cc.kl
+│   │   ├── Vendor_054c_Product_0ce6.kl
+│   │   ├── Vendor_057e_Product_0306.kl
+│   │   ├── Vendor_057e_Product_2009.kl
+│   │   ├── Vendor_0583_Product_2060.kl
+│   │   ├── Vendor_05ac_Product_0239.kl
+│   │   ├── Vendor_0b05_Product_4500.kl
+│   │   ├── Vendor_1038_Product_1412.kl
+│   │   ├── Vendor_12bd_Product_d015.kl
+│   │   ├── Vendor_1532_Product_0900.kl
+│   │   ├── Vendor_1689_Product_fd00.kl
+│   │   ├── Vendor_1689_Product_fd01.kl
+│   │   ├── Vendor_1689_Product_fe00.kl
+│   │   ├── Vendor_18d1_Product_2c40.kl
+│   │   ├── Vendor_1949_Product_0401.kl
+│   │   ├── Vendor_1949_Product_0402.kl
+│   │   ├── Vendor_1949_Product_0404.kl
+│   │   ├── Vendor_1949_Product_0406.kl
+│   │   ├── Vendor_1949_Product_0407.kl
+│   │   ├── Vendor_1949_Product_0409.kl
+│   │   ├── Vendor_1949_Product_040a.kl
+│   │   ├── Vendor_1949_Product_0415.kl
+│   │   ├── Vendor_1949_Product_0419.kl
+│   │   ├── Vendor_1bad_Product_f016.kl
+│   │   ├── Vendor_1bad_Product_f023.kl
+│   │   ├── Vendor_1bad_Product_f027.kl
+│   │   ├── Vendor_1bad_Product_f036.kl
+│   │   ├── Vendor_1d79_Product_0009.kl
+│   │   ├── Vendor_20a0_Product_0004.kl
+│   │   ├── Vendor_22b8_Product_093d.kl
+│   │   ├── Vendor_2378_Product_1008.kl
+│   │   ├── Vendor_2378_Product_100a.kl
+│   │   └── Vendor_2836_Product_0001.kl
+│   └── share
+│       ├── bmd
+│       │   ├── RFFspeed_501.bmd
+│       │   └── RFFstd_501.bmd
+│       ├── iwnn
+│       │   ├── JA.conf
+│       │   ├── njcon.a
+│       │   ├── njexyomi.a
+│       │   ├── njexyomi_new.a
+│       │   ├── njexyomi_re.a
+│       │   ├── njfzk.a
+│       │   ├── njtan.a
+│       │   ├── njubase1.a
+│       │   └── njubase2.a
+│       └── zoneinfo
+│           └── tzdata
+├── vendor
+│   ├── app
+│   │   └── Ds
+│   │       ├── arm
+│   │       │   └── Ds.odex
+│   │       └── Ds.apk
+│   ├── data
+│   │   ├── amz.rsa
+│   │   ├── trapz_scripts.tar.gz
+│   │   ├── trapz_xml
+│   │   │   ├── 1.txt
+│   │   │   ├── 2.txt
+│   │   │   ├── 3.txt
+│   │   │   └── 4.txt
+│   │   └── ttp
+│   │       ├── facebook-orca.rsa
+│   │       ├── qq.rsa
+│   │       ├── skype-phoenix.rsa
+│   │       ├── skype-raider.rsa
+│   │       ├── tecla-2013.rsa
+│   │       ├── tecla-2014.rsa
+│   │       └── viber-voip.rsa
+│   ├── etc
+│   │   ├── audio_effects.conf
+│   │   └── dolby
+│   │       └── ds-default.xml
+│   ├── firmware
+│   │   ├── BCM43569A2_001.003.004.0172.0000_Generic_UART_40MHz_fcbga_BU_AmazonTank.hcd
+│   │   ├── BCM43569A2_001.003.004.1001.0000_Generic_UART_40MHz_fcbga_BU_AmazonTank.hcd
+│   │   └── brcm
+│   │       ├── bcm43569a2-firmware.bin
+│   │       ├── bcm43569a2-firmware-test.bin
+│   │       └── bcm43569a2.nvm
+│   ├── lib
+│   │   ├── drm
+│   │   │   └── libdrmwvmplugin.so
+│   │   ├── libbt-vendor.so
+│   │   ├── libdlb_converter.so
+│   │   ├── libdlbdapstorage.so
+│   │   ├── libFPS.so
+│   │   ├── liboemcrypto.so
+│   │   ├── libstagefright_soft_ddpdec.so
+│   │   ├── libTAFps.so
+│   │   ├── libwvdrm_L1.so
+│   │   ├── libwvm.so
+│   │   ├── libWVStreamControlAPI_L1.so
+│   │   ├── mediadrm
+│   │   │   ├── libdrmclearkeyplugin.so
+│   │   │   ├── libdrmfpsplugin.so
+│   │   │   ├── libmockdrmcryptoplugin.so
+│   │   │   ├── libplayreadydrmplugin.so
+│   │   │   └── libwvdrmengine.so
+│   │   └── soundfx
+│   │       └── libswdap.so
+│   └── smartvolume
+│       ├── app
+│       │   └── Ds
+│       │       ├── arm
+│       │       │   └── Ds.odex
+│       │       └── Ds.apk
+│       ├── data
+│       │   ├── amz.rsa
+│       │   ├── trapz_scripts.tar.gz
+│       │   ├── trapz_xml
+│       │   │   ├── 1.txt
+│       │   │   ├── 2.txt
+│       │   │   ├── 3.txt
+│       │   │   └── 4.txt
+│       │   └── ttp
+│       │       ├── facebook-orca.rsa
+│       │       ├── qq.rsa
+│       │       ├── skype-phoenix.rsa
+│       │       ├── skype-raider.rsa
+│       │       ├── tecla-2013.rsa
+│       │       ├── tecla-2014.rsa
+│       │       └── viber-voip.rsa
+│       ├── etc
+│       │   ├── audio_effects.conf
+│       │   └── dolby
+│       │       └── ds-default.xml
+│       ├── firmware
+│       │   ├── BCM43569A2_001.003.004.0172.0000_Generic_UART_40MHz_fcbga_BU_AmazonTank.hcd
+│       │   ├── BCM43569A2_001.003.004.1001.0000_Generic_UART_40MHz_fcbga_BU_AmazonTank.hcd
+│       │   └── brcm
+│       │       ├── bcm43569a2-firmware.bin
+│       │       ├── bcm43569a2-firmware-test.bin
+│       │       └── bcm43569a2.nvm
+│       ├── lib
+│       │   ├── drm
+│       │   │   └── libdrmwvmplugin.so
+│       │   ├── libbt-vendor.so
+│       │   ├── libdlb_converter.so
+│       │   ├── libdlbdapstorage.so
+│       │   ├── libFPS.so
+│       │   ├── liboemcrypto.so
+│       │   ├── libstagefright_soft_ddpdec.so
+│       │   ├── libTAFps.so
+│       │   ├── libwvdrm_L1.so
+│       │   ├── libwvm.so
+│       │   ├── libWVStreamControlAPI_L1.so
+│       │   ├── mediadrm
+│       │   │   ├── libdrmclearkeyplugin.so
+│       │   │   ├── libdrmfpsplugin.so
+│       │   │   ├── libmockdrmcryptoplugin.so
+│       │   │   ├── libplayreadydrmplugin.so
+│       │   │   └── libwvdrmengine.so
+│       │   └── soundfx
+│       │       └── libswdap.so
+│       ├── smartvolume
+│       │   └── tank
+│       │       ├── anlg_dock_headset.csv
+│       │       ├── aux_digital.csv
+│       │       ├── bt_a2dp.csv
+│       │       ├── bt_a2dp_headphones.csv
+│       │       ├── bt_a2dp_speaker.csv
+│       │       ├── bt_sco_carkit.csv
+│       │       ├── bt_sco.csv
+│       │       ├── bt_sco_headset.csv
+│       │       ├── default.csv
+│       │       ├── dgtl_dock_headeset.csv
+│       │       ├── speaker.csv
+│       │       ├── wired_headphone.csv
+│       │       └── wired_headset.csv
+│       └── tank
+│           ├── anlg_dock_headset.csv
+│           ├── aux_digital.csv
+│           ├── bt_a2dp.csv
+│           ├── bt_a2dp_headphones.csv
+│           ├── bt_a2dp_speaker.csv
+│           ├── bt_sco_carkit.csv
+│           ├── bt_sco.csv
+│           ├── bt_sco_headset.csv
+│           ├── default.csv
+│           ├── dgtl_dock_headeset.csv
+│           ├── speaker.csv
+│           ├── wired_headphone.csv
+│           └── wired_headset.csv
+└── xbin
+    ├── dexdump
+    ├── sqlite3
+    ├── trapz
+    ├── vitals_collection_agent
+    └── wl
+
+395 directories, 1930 files
