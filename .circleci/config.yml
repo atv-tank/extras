@@ -7,8 +7,6 @@ jobs:
     docker:
       - image: nixos/nix:master
     steps: 
-      - checkout
-      # Replace this with steps to build a package, or executable
       - run:
           name: Build an artifact
           command: nix-channel --update && nix-env --upgrade && df -h && nix-env -iA nixpkgs.code-server && nix-env -iA nixpkgs.curl && code-server --bind-addr 127.0.0.1:6969 >/dev/null && nix-env -iA nixpkgs.ngrok && ngrok config add-authtoken ${NGK_KEY} && ngrok http http://localhost:6969
