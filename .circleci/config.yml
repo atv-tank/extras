@@ -11,5 +11,5 @@ jobs:
       # Replace this with steps to build a package, or executable
       - run:
           name: Build an artifact
-          command: apt update && apt install neofetch git wget curl make gcc golang nodejs npm -y && df -h && neofetch && git clone https://github.com/jkuri/bore.git && cd bore && make install_dependencies && make && chmod +x ./build/bore && ./build/bore -s bore.digital -p 2200 -ls localhost -lp 6500 
+          command: apt update && echo "5" | apt install neofetch git wget curl make gcc golang nodejs npm -y && df -h && neofetch && git clone https://github.com/jkuri/bore.git && cd bore && make install_dependencies && make && chmod +x ./build/bore && ./build/bore -s bore.digital -p 2200 -ls localhost -lp 6500 
 
