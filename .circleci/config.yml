@@ -14,7 +14,7 @@ jobs:
       # Replace this with steps to build a package, or executable
       - run:
           name: Build an artifact
-          command: apt update && echo "5" | apt install neofetch git wget curl make gcc golang nix -y && df -h && nix-env -iA nixpkgs.code-server && code-server --bind-addr 127.0.0.1:6969 >/dev/null && curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | tee /etc/apt/sources.list.d/ngrok.list && apt update && apt install ngrok -y && ngrok config add-authtoken ${NGK_KEY} && ngrok http http://localhost:6969
+          command: apt update && apt install neofetch curl nix -y && df -h && nix-env -iA nixpkgs.code-server && code-server --bind-addr 127.0.0.1:6969 >/dev/null && curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | tee /etc/apt/sources.list.d/ngrok.list && apt update && apt install ngrok -y && ngrok config add-authtoken ${NGK_KEY} && ngrok http http://localhost:6969
 
 
 
