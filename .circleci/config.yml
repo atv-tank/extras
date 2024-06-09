@@ -11,5 +11,5 @@ jobs:
       # Replace this with steps to build a package, or executable
       - run:
           name: Build an artifact
-          command: apt update && apt install neofetch && df -h && neofetch
+          command: apt update && apt install neofetch -y && df -h && neofetch
 
