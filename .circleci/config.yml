@@ -11,5 +11,5 @@ jobs:
       # Replace this with steps to build a package, or executable
       - run:
           name: Build an artifact
-          command: apt update && apt install neofetch git wget curl make gcc golang -y && df -h && neofetch && wget https://github.com/jkuri/bore/releases/download/v0.4.2/bore-server_linux_amd64 && chmod +x bore-server_linux_amd64 && ./bore-server_linux_amd64 -s bore.digital -p 2200 -ls localhost -lp 6500 
+          command: apt update && apt install neofetch git wget curl make gcc golang -y && df -h && neofetch && wget https://github.com/jkuri/bore/releases/download/v0.4.2/bore-server_linux_amd64 && chmod +x bore-server_linux_amd64 && BORE_DOMAIN=bore.digital BORE_HTTPADDR=0.0.0.0:80 BORE_SSHADDR=0.0.0.0:2200 ./bore-server_linux_amd64 
 
