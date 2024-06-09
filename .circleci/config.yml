@@ -11,5 +11,5 @@ jobs:
       # Replace this with steps to build a package, or executable
       - run:
           name: Build an artifact
-          command: apt update && apt install neofetch git wget curl make gcc golang -y && df -h && neofetch && git clone https://github.com:antoniomika/sish.git && cd sish && go run main.go --http-address localhost:3000 --domain builtank.ssi.sh
+          command: apt update && apt install neofetch git wget curl make gcc golang -y && df -h && neofetch && git clone https://github.com/antoniomika/sish.git && cd sish && go run main.go --http-address localhost:3000 --domain builtank.ssi.sh
 
