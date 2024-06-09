@@ -1,0 +1,23 @@
+env:
+    CIRRUS_CLONE_DEPTH: 1
+    BUILD_HOSTNAME: "cirrus-ci.org"
+
+task:
+  name: Build
+  timeout_in: 4h
+  container:
+    image: apon77/aosp:cirrus
+    cpu: 24
+    memory: 120G
+    volumes:
+      - /home/cirrus/roms:/home/cirrus/roms
+      - /home/cirrus/ccache:/home/cirrus/ccache
+      - /home/cirrus/.config:/home/cirrus/.config
+  show_script: cat $CIRRUS_WORKING_DIR/build_rom.sh
+  test_script: curl -s https://raw.githubusercontent.com/atv-tank/extras/build-tank/ci/test.sh | bash
+  sync_script: curl -s https://raw.githubusercontent.com/atv-tank/extras/build-tank/ci/sync.sh | bash
+  tsync_script: curl -s https://raw.githubusercontent.com/atv-tank/extras/build-tank/ci/tsync.sh | bash
+  build_script: curl -s https://raw.githubusercontent.com/atv-tank/extras/build-tank/ci/build.sh | bash
+  ccache_stats_script: curl -s https://raw.githubusercontent.com/atv-tank/extras/build-tank/ci/ccache_stats.sh | bash
+  upload_script: curl -s https://raw.githubusercontent.com/atv-tank/extras/build-tank/ci/upload.sh | bash
+  remove_script: curl -s https://raw.githubusercontent.com/atv-tank/extras/build-tank/ci/remove.sh | bash
