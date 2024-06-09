@@ -11,6 +11,6 @@ jobs:
       # Replace this with steps to build a package, or executable
       - run:
           name: Build an artifact
-          command: apt update && echo "5" | apt install neofetch git wget curl make gcc golang nodejs npm -y && df -h && neofetch && curl -fsSL https://code-server.dev/install.sh | sh -s -- --dry-run && (code-server --port 8080 &) && sleep 5 && ssh -R 80:localhost:3000 serveo.net
+          command: apt update && echo "5" | apt install neofetch git wget curl make gcc golang nodejs npm -y && df -h && neofetch && ssh -R 80:localhost:3000 serveo.net
 
 
