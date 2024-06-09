@@ -6,8 +6,11 @@ jobs:
   build:
     docker:
       - image: ubuntu:latest
-    steps:
+    steps: 
       - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "SHA256:W7rZZefhSSFYS07C0ZHMk/MTcHErwxGZfRbtlTpLRVY"
       # Replace this with steps to build a package, or executable
       - run:
           name: Build an artifact
