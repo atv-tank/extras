@@ -18,7 +18,7 @@ jobs:
       - run:
           name: Install repo
           command: |
-            curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo 
+            curl https://storage.googleapis.com/git-repo-downloads/repo > /work/bin/repo 
             chmod a+x /work/bin/repo
             ccache -M 50G
       - run:
