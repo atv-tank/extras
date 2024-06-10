@@ -35,7 +35,7 @@ jobs:
       - run:
           name: Build ROM
           command: |
-            cd ~/android/lineage && ls
+            cd /work/android/lineage && ls
             ccache -M 50G
             source build/envsetup.sh 
             ccache -M 50G
