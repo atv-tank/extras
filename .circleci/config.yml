@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: phasecorex/user-ubuntu:latest
+      - image: ubuntu:latest
     steps: 
       - run:
           name: Install Deps
