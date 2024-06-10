@@ -7,7 +7,6 @@ jobs:
     docker:
       - image: phasecorex/user-ubuntu:latest
     steps: 
-      - checkout 
       - run:
           name: Install Deps
           command: |
