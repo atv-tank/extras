@@ -25,8 +25,10 @@ jobs:
           name: Build Prep
           command: |
             cd /work/android/lineage
+            git config --global user.email "shashankspis20@gmail.com"
+            git config --global user.name "shashankx86"
             /work/bin/repo init --depth=1 --no-repo-verify -u https://github.com/atv-tank/manifest.git -b cm-14.1 -m default.xml
-            /work/bin/repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
+            /work/bin/repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8 
             git clone https://github.com/atv-tank/android_device_amazon_tank -b cm-14.1 device/amazon/tank
             git clone https://github.com/atv-tank/android_kernel_amazon_mt8127 -b cm-14.1 kernel/amazon/mt8127
             git clone https://github.com/atv-tank/vendor_amazon_tank -b exp vendor/amazon/tank && ls
