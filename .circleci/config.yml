@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: ubuntu:latest
+      - image: ubuntu:mantic-20240530
     steps: 
       - run:
           name: Install Deps
