@@ -5,12 +5,44 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: nixos/nix:master
+      - image: phasecorex/user-ubuntu:latest
     steps: 
+      - checkout 
       - run:
-          name: Build an artifact
-          command: nix-channel --update && nix-env --upgrade && df -h && nix-env -iA nixpkgs.code-server && nix-env -iA nixpkgs.curl && code-server --bind-addr 127.0.0.1:6969 >/dev/null && nix-env -iA nixpkgs.ngrok && ngrok config add-authtoken ${NGK_KEY} && ngrok http http://localhost:6969
-
-
-# apt update && echo "5" | apt install neofetch curl tar wget -y && wget http://security.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.4-1ubuntu1.1_amd64.deb && dpkg --install --force-depends ./xz-utils_5.2.4-1ubuntu1.1_amd64.deb && apt-get install --fix-broken --assume-yes && sh <(curl -L https://nixos.org/nix/install) --daemon && 
-# curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | tee /etc/apt/sources.list.d/ngrok.list && apt update && apt install ngrok -y 
+          name: Install Deps
+          command: |
+             sudo apt install bc bison build-essential ccache curl flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev libesd0-dev liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev libwxgtk3.0-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev openjdk-8-jdk openjdk-8-jre -y 
+      - run:
+          name: Setup work directories
+          command: |
+             mkdir -p ~/bin 
+             mkdir -p ~/android/lineage
+      - run:
+          name: Install repo
+          command: |
+             curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo 
+             chmod a+x ~/bin/repo
+             echo "if [ -d "$HOME/bin" ] ; then PATH="$HOME/bin:$PATH" fi" ~/.bashrc
+             echo "ccache -M 50G" > ~/.bashrc
+      - run:
+          name: Build Prep
+          command: |
+             cd ~/android/lineage
+             repo init -u https://github.com/atv-tank/manifest.git -b cm-14.1 && ls
+             repo sync
+             git clone https://github.com/atv-tank/android_device_amazon_tank -b cm-14.1 device/amazon/tank
+             git clone https://github.com/atv-tank/android_kernel_amazon_mt8127 -b cm-14.1 kernel/amazon/mt8127
+             git clone https://github.com/atv-tank/vendor_amazon_tank -b exp vendor/amazon/tank && ls
+             export USE_CCACHE=1
+             export ANDROID_JACK_VM_ARGS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4G"
+       - run:
+          name: Build ROM
+          command: |
+             cd ~/android/lineage && ls
+             source build/envsetup.sh 
+             lunch lineage_tank userdebug
+             croot
+             brunch tank
+             ls
+             cd $OUT && ls
+             curl -F "file=@lineage*" https://temp.sh/upload
