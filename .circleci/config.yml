@@ -25,7 +25,7 @@ jobs:
           name: Build Prep
           command: |
             cd /work/android/lineage
-            /work/bin/repo init -u https://github.com/atv-tank/manifest.git -b cm-14.1 -m tank-manifest.xml && ls
+            git clone https://github.com/atv-tank/manifest.git -b cm-14.1 .repo/local_manifests && ls
             /work/bin/repo sync
             git clone https://github.com/atv-tank/android_device_amazon_tank -b cm-14.1 device/amazon/tank
             git clone https://github.com/atv-tank/android_kernel_amazon_mt8127 -b cm-14.1 kernel/amazon/mt8127
