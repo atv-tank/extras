@@ -8,25 +8,25 @@ jobs:
           name: Install Deps
           command: |
             apt update
-            apt install bc python3 bison build-essential ccache curl flex g++-multilib gcc-multilib git git-lfs gnupg gperf imagemagick lib32readline-dev lib32z1-dev libelf-dev liblz4-tool libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev openjdk-8-jdk openjdk-8-jre -y 
+            echo "5" | apt install bc python3 bison build-essential ccache curl flex g++-multilib gcc-multilib git git-lfs gnupg gperf imagemagick lib32readline-dev lib32z1-dev libelf-dev liblz4-tool libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev openjdk-8-jdk openjdk-8-jre -y 
       - run:
           name: Setup work directories
           command: |
-            mkdir -p ~/bin 
-            mkdir -p ~/android/lineage
+            mkdir -p /work
+            mkdir -p /work/bin 
+            mkdir -p /work/android/lineage
       - run:
           name: Install repo
           command: |
             curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo 
-            chmod a+x ~/bin/repo
-            echo "if [ -d \"$HOME/bin\" ] ; then PATH=\"$HOME/bin:$PATH\" fi" >> ~/.bashrc
-            echo "ccache -M 50G" >> ~/.bashrc
+            chmod a+x /work/bin/repo
+            ccache -M 50G
       - run:
           name: Build Prep
           command: |
-            cd ~/android/lineage
-            repo init -u https://github.com/atv-tank/manifest.git -b cm-14.1 && ls
-            repo sync
+            cd /work/android/lineage
+            ./work/bin/repo init -u https://github.com/atv-tank/manifest.git -b cm-14.1 && ls
+            ./work/bin/repo sync
             git clone https://github.com/atv-tank/android_device_amazon_tank -b cm-14.1 device/amazon/tank
             git clone https://github.com/atv-tank/android_kernel_amazon_mt8127 -b cm-14.1 kernel/amazon/mt8127
             git clone https://github.com/atv-tank/vendor_amazon_tank -b exp vendor/amazon/tank && ls
@@ -36,9 +36,13 @@ jobs:
           name: Build ROM
           command: |
             cd ~/android/lineage && ls
+            ccache -M 50G
             source build/envsetup.sh 
+            ccache -M 50G
             lunch lineage_tank userdebug
+            ccache -M 50G
             croot
+            ccache -M 50G
             brunch tank
             ls
             cd $OUT && ls
