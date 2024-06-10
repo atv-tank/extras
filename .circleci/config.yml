@@ -8,7 +8,7 @@ jobs:
           name: Install Deps
           command: |
             apt update
-            echo "5" | apt install bc python3 bison build-essential ccache curl flex g++-multilib gcc-multilib git git-lfs gnupg gperf imagemagick lib32readline-dev lib32z1-dev libelf-dev liblz4-tool libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev openjdk-8-jdk openjdk-8-jre -y 
+            echo "5" | apt install bc python3 procps bison build-essential ccache curl flex g++-multilib gcc-multilib git git-lfs gnupg gperf imagemagick lib32readline-dev lib32z1-dev libelf-dev liblz4-tool libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev openjdk-8-jdk openjdk-8-jre -y 
       - run:
           name: Setup work directories
           command: |
@@ -24,6 +24,7 @@ jobs:
       - run:
           name: Build Prep
           command: |
+            sysctl -w net.ipv4.tcp_window_scaling=0
             cd /work/android/lineage
             git config --global user.email "shashankspis20@gmail.com"
             git config --global user.name "shashankx86"
