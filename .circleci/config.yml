@@ -1,7 +1,7 @@
 version: 2.1
 jobs:
   build:
-    machine:
+      - machine: true
       - image: ubuntu:mantic-20240530
     steps: 
       - run:
