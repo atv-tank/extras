@@ -1,52 +1,74 @@
 version: 2.1
+
 jobs:
   build:
-      - machine: true
+    docker:
       - image: ubuntu:mantic-20240530
-    steps: 
+    steps:
+      - checkout
       - run:
-          name: Install Deps
+          name: Install QEMU and SSH
           command: |
             apt update
-            echo "5" | apt install bc python3 procps bison build-essential ccache curl flex g++-multilib gcc-multilib git git-lfs gnupg gperf imagemagick lib32readline-dev lib32z1-dev libelf-dev liblz4-tool libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev openjdk-8-jdk openjdk-8-jre -y 
+            apt install -y qemu qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virtinst cloud-image-utils openssh-client
+            apt clean
       - run:
-          name: Setup work directories
+          name: Setup QEMU VM
           command: |
             mkdir -p /work
-            mkdir -p /work/bin 
-            mkdir -p /work/android/lineage
+            curl -L -o /work/mantic-server-cloudimg-amd64.img https://cloud-images.ubuntu.com/mantic/20240410/mantic-server-cloudimg-amd64.img
+            qemu-img convert -f raw -O qcow2 /work/mantic-server-cloudimg-amd64.img /work/mantic-server-cloudimg-amd64.qcow2
+            qemu-img resize /work/mantic-server-cloudimg-amd64.qcow2 200G
+            cat > /work/user-data <<EOF
+            #cloud-config
+            users:
+              - name: builduser
+                ssh-authorized-keys:
+                  - $(cat ~/.ssh/id_rsa.pub)
+                sudo: ALL=(ALL) NOPASSWD:ALL
+                groups: sudo
+                shell: /bin/bash
+            runcmd:
+              - mkdir -p /home/builduser/work/bin
+              - mkdir -p /home/builduser/work/android/lineage
+            EOF
+            cloud-localds /work/cloud-init.iso /work/user-data
+            qemu-system-x86_64 -m 4G -smp 4 -hda /work/mantic-server-cloudimg-amd64.qcow2 -cdrom /work/cloud-init.iso -net nic -net user,hostfwd=tcp::2222-:22 -daemonize
+            sleep 30
+            ssh-keygen -f "/root/.ssh/known_hosts" -R "[localhost]:2222"
+            ssh-keyscan -p 2222 localhost >> /root/.ssh/known_hosts
       - run:
-          name: Install repo
+          name: Install Build Deps in QEMU
           command: |
-            curl https://storage.googleapis.com/git-repo-downloads/repo > /work/bin/repo 
-            chmod a+x /work/bin/repo
-            ccache -M 50G
+            ssh -p 2222 -o StrictHostKeyChecking=no builduser@localhost << 'EOF'
+              sudo apt update
+              sudo apt install -y bc python3 procps bison build-essential ccache curl flex g++-multilib gcc-multilib git git-lfs gnupg gperf imagemagick lib32readline-dev lib32z1-dev libelf-dev liblz4-tool libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev openjdk-8-jdk openjdk-8-jre
+              curl https://storage.googleapis.com/git-repo-downloads/repo > /home/builduser/work/bin/repo
+              chmod a+x /home/builduser/work/bin/repo
+              ccache -M 50G
+            EOF
       - run:
-          name: Build Prep
+          name: Copy and Run Scripts in VM
           command: |
-            sysctl -w net.ipv4.tcp_window_scaling=0
-            cd /work/android/lineage
-            git config --global user.email "shashankspis20@gmail.com"
-            git config --global user.name "shashankx86"
-            /work/bin/repo init --depth=1 --no-repo-verify -u https://github.com/atv-tank/manifest.git -b cm-14.1 -m default.xml
-            /work/bin/repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8 
-            # git clone https://github.com/atv-tank/android_device_amazon_tank -b cm-14.1 device/amazon/tank
-            # git clone https://github.com/atv-tank/android_kernel_amazon_mt8127 -b cm-14.1 kernel/amazon/mt8127
-            # git clone https://github.com/atv-tank/vendor_amazon_tank -b exp vendor/amazon/tank && ls
-            export USE_CCACHE=1
-            export ANDROID_JACK_VM_ARGS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4G"
+            scp -P 2222 -o StrictHostKeyChecking=no -r . builduser@localhost:/home/builduser/work
+            ssh -p 2222 -o StrictHostKeyChecking=no builduser@localhost << 'EOF'
+              cd /home/builduser/work
+              sudo sysctl -w net.ipv4.tcp_window_scaling=0
+              cd /home/builduser/work/android/lineage
+              git config --global user.email "shashankspis20@gmail.com"
+              git config --global user.name "shashankx86"
+              /home/builduser/work/bin/repo init --depth=1 --no-repo-verify -u https://github.com/atv-tank/manifest.git -b cm-14.1 -m default.xml
+              /home/builduser/work/bin/repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
+              export USE_CCACHE=1
+              export ANDROID_JACK_VM_ARGS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4G"
+              ccache -M 50G
+              source build/envsetup.sh
+              lunch lineage_tank userdebug
+              brunch tank
+              cd $OUT
+              curl -F "file=@lineage*" https://temp.sh/upload
+            EOF
       - run:
-          name: Build ROM
+          name: Display Logs
           command: |
-            cd /work/android/lineage && ls
-            ccache -M 50G
-            source build/envsetup.sh 
-            ccache -M 50G
-            lunch lineage_tank userdebug
-            ccache -M 50G
-            croot
-            ccache -M 50G
-            brunch tank
-            ls
-            cd $OUT && ls
-            curl -F "file=@lineage*" https://temp.sh/upload
+            ssh -p 2222 -o StrictHostKeyChecking=no builduser@localhost "cat /home/builduser/work/android/lineage/out/build.log"
