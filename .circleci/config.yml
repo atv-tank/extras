@@ -19,7 +19,7 @@ jobs:
             curl -L -o /work/mantic-server-cloudimg-amd64.img https://cloud-images.ubuntu.com/mantic/20240410/mantic-server-cloudimg-amd64.img
             qemu-img convert -f raw -O qcow2 /work/mantic-server-cloudimg-amd64.img /work/mantic-server-cloudimg-amd64.qcow2
             qemu-img resize /work/mantic-server-cloudimg-amd64.qcow2 200G
-            cat > /work/user-data <<EOF
+            cat > /work/user-data \<<EOF
             #cloud-config
             users:
               - name: builduser
@@ -40,7 +40,7 @@ jobs:
       - run:
           name: Install Build Deps in QEMU
           command: |
-            ssh -p 2222 -o StrictHostKeyChecking=no builduser@localhost << 'EOF'
+            ssh -p 2222 -o StrictHostKeyChecking=no builduser@localhost \<< 'EOF'
               sudo apt update
               sudo apt install -y bc python3 procps bison build-essential ccache curl flex g++-multilib gcc-multilib git git-lfs gnupg gperf imagemagick lib32readline-dev lib32z1-dev libelf-dev liblz4-tool libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev openjdk-8-jdk openjdk-8-jre
               curl https://storage.googleapis.com/git-repo-downloads/repo > /home/builduser/work/bin/repo
@@ -51,7 +51,7 @@ jobs:
           name: Copy and Run Scripts in VM
           command: |
             scp -P 2222 -o StrictHostKeyChecking=no -r . builduser@localhost:/home/builduser/work
-            ssh -p 2222 -o StrictHostKeyChecking=no builduser@localhost << 'EOF'
+            ssh -p 2222 -o StrictHostKeyChecking=no builduser@localhost \<< 'EOF'
               cd /home/builduser/work
               sudo sysctl -w net.ipv4.tcp_window_scaling=0
               cd /home/builduser/work/android/lineage
