@@ -37,7 +37,7 @@ jobs:
               - mkdir -p /home/builduser/work/android/lineage
             EOF
             cloud-localds /work/cloud-init.iso /work/user-data
-            qemu-system-x86_64 -m 4G -smp 4 -hda /work/mantic-server-cloudimg-amd64.qcow2 -cdrom /work/cloud-init.iso -net nic -net user,hostfwd=tcp::2222-:22 -nographic 
+            qemu-system-x86_64 -m 4G -smp 4 -hda /work/mantic-server-cloudimg-amd64.qcow2 -cdrom /work/cloud-init.iso -net nic -net user,hostfwd=tcp::2222-:22 -nographic -boot d 
             sleep 30
             ssh-keygen -f "/root/.ssh/known_hosts" -R "[localhost]:2222"
             ssh-keyscan -p 2222 localhost >> /root/.ssh/known_hosts
