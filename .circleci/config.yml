@@ -10,7 +10,7 @@ jobs:
           name: Install QEMU and SSH
           command: |
             apt update
-            apt install -y qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virtinst cloud-image-utils openssh-client
+            echo "5" | apt install -y qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virtinst cloud-image-utils openssh-client
             apt clean
       - run:
           name: Setup QEMU VM
