@@ -15,7 +15,6 @@ jobs:
       - run:
           name: Setup QEMU VM
           command: |
-            systemctl enable --now libvirtd
             mkdir -p /work
             curl -L -o /work/mantic-server-cloudimg-amd64.img https://cloud-images.ubuntu.com/mantic/20240410/mantic-server-cloudimg-amd64.img
             qemu-img convert -f raw -O qcow2 /work/mantic-server-cloudimg-amd64.img /work/mantic-server-cloudimg-amd64.qcow2
