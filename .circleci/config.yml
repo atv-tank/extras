@@ -12,6 +12,10 @@ jobs:
             apt update
             echo "5" | apt install -y qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virtinst cloud-image-utils openssh-client curl
             apt clean
+            # Generate SSH key if it doesn't exist
+            if [ ! -f ~/.ssh/id_rsa ]; then
+              ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa -N ""
+            fi
       - run:
           name: Setup QEMU VM
           command: |
@@ -33,7 +37,7 @@ jobs:
               - mkdir -p /home/builduser/work/android/lineage
             EOF
             cloud-localds /work/cloud-init.iso /work/user-data
-            qemu-system-x86_64 -m 4G -smp 4 -hda /work/mantic-server-cloudimg-amd64.qcow2 -cdrom /work/cloud-init.iso -net nic -net user,hostfwd=tcp::2222-:22 -daemonize
+            qemu-system-x86_64 -m 4G -smp 4 -hda /work/mantic-server-cloudimg-amd64.qcow2 -cdrom /work/cloud-init.iso -net nic -net user,hostfwd=tcp::2222-:22 -nographic 
             sleep 30
             ssh-keygen -f "/root/.ssh/known_hosts" -R "[localhost]:2222"
             ssh-keyscan -p 2222 localhost >> /root/.ssh/known_hosts
