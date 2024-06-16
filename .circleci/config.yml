@@ -96,22 +96,29 @@ jobs:
             EOF
             
             echo "Setup complete."
-      - run:
-          name: Install Build Deps in QEMU
-          command: |
-            ssh -p 2222 -o StrictHostKeyChecking=no builduser@localhost \<< 'EOF'
-              mkdir -p $MOUNT_POINT/work
-              mkdir -p $MOUNT_POINT/work/android/lineage
-              sudo apt update
-              sudo apt install -y bc python3 procps bison build-essential ccache curl flex g++-multilib gcc-multilib git git-lfs gnupg gperf imagemagick lib32readline-dev lib32z1-dev libelf-dev liblz4-tool libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev openjdk-8-jdk openjdk-8-jre
-              curl https://storage.googleapis.com/git-repo-downloads/repo > /home/builduser/work/bin/repo
-              chmod a+x /home/builduser/work/bin/repo
-              ccache -M 50G
-            EOF
+
+            mkdir -p $MOUNT_POINT/work
+            mkdir -p $MOUNT_POINT/work/android/lineage
+            sudo apt update
+            sudo apt install -y bc python3 procps bison build-essential ccache curl flex g++-multilib gcc-multilib git git-lfs gnupg gperf imagemagick lib32readline-dev lib32z1-dev libelf-dev liblz4-tool libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev openjdk-8-jdk openjdk-8-jre
+            curl https://storage.googleapis.com/git-repo-downloads/repo > /home/builduser/work/bin/repo
+            chmod a+x /home/builduser/work/bin/repo
+            ccache -M 50G
+      # - run:
+      #     name: Install Build Deps in QEMU
+      #     command: |
+      #       ssh -p 2222 -o StrictHostKeyChecking=no builduser@localhost \<< 'EOF'
+      #         mkdir -p $MOUNT_POINT/work
+      #         mkdir -p $MOUNT_POINT/work/android/lineage
+      #         sudo apt update
+      #         sudo apt install -y bc python3 procps bison build-essential ccache curl flex g++-multilib gcc-multilib git git-lfs gnupg gperf imagemagick lib32readline-dev lib32z1-dev libelf-dev liblz4-tool libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev openjdk-8-jdk openjdk-8-jre
+      #         curl https://storage.googleapis.com/git-repo-downloads/repo > /home/builduser/work/bin/repo
+      #         chmod a+x /home/builduser/work/bin/repo
+      #         ccache -M 50G
+      #       EOF
       - run:
           name: Copy and Run Scripts in VM
           command: |
-            scp -P 2222 -o StrictHostKeyChecking=no -r . builduser@localhost:/home/builduser/work
             ssh -p 2222 -o StrictHostKeyChecking=no builduser@localhost \<< 'EOF'
               cd $MOUNT_POINT/work
               sudo sysctl -w net.ipv4.tcp_window_scaling=0
