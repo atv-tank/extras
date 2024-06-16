@@ -69,7 +69,7 @@ jobs:
             
             # Partition the new storage disk
             echo "Partitioning the storage disk..."
-            ssh -o StrictHostKeyChecking=no -p 2222 builder@localhost << 'EOF'
+            ssh -o StrictHostKeyChecking=no -p 2222 builder@localhost \<< 'EOF'
             echo -e "n\np\n1\n\n\nw" | sudo fdisk /dev/sdb
             EOF
             
@@ -79,7 +79,7 @@ jobs:
             
             # Mount the new partition
             echo "Mounting the new partition..."
-            ssh -p 2222 builder@localhost << EOF
+            ssh -p 2222 builder@localhost \<< EOF
             sudo mkdir -p $MOUNT_POINT
             sudo mount /dev/sdb1 $MOUNT_POINT
             EOF
@@ -90,7 +90,7 @@ jobs:
             
             # Add entry to /etc/fstab for persistent mount
             echo "Adding entry to /etc/fstab..."
-            ssh -p 2222 builder@localhost << EOF
+            ssh -p 2222 builder@localhost \<< EOF
             echo "UUID=$UUID $MOUNT_POINT ext4 defaults 0 2" | sudo tee -a /etc/fstab
             sudo mount -a
             EOF
