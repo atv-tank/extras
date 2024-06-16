@@ -61,11 +61,12 @@ jobs:
               -drive file=$STORAGE,format=qcow2 \
               -drive file=$CLOUD_INIT_DIR/$USER_DATA,format=raw \
               -net nic -net user,hostfwd=tcp::2222-:22 \
-              -nographic &
+              -nographic \
+              -enable-kvm &
             
             # Wait for the VM to boot
             echo "Waiting for the VM to boot..."
-            sleep 60
+            sleep 70
             
             # Partition the new storage disk
             echo "Partitioning the storage disk..."
