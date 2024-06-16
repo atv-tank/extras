@@ -93,10 +93,6 @@ jobs:
             ssh -p 2222 builder@localhost \<< EOF
             echo "UUID=$UUID $MOUNT_POINT ext4 defaults 0 2" | sudo tee -a /etc/fstab
             sudo mount -a
-            EOF
-            
-            echo "Setup complete."
-
             mkdir -p $MOUNT_POINT/work
             mkdir -p $MOUNT_POINT/work/android/lineage
             sudo apt update
@@ -104,6 +100,9 @@ jobs:
             curl https://storage.googleapis.com/git-repo-downloads/repo > /home/builduser/work/bin/repo
             chmod a+x /home/builduser/work/bin/repo
             ccache -M 50G
+            EOF
+
+            echo "Setup complete."
       # - run:
       #     name: Install Build Deps in QEMU
       #     command: |
