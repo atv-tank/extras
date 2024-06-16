@@ -27,7 +27,7 @@ jobs:
             export CLOUD_INIT_DIR="cloud-init"
             
             mkdir -p $CLOUD_INIT_DIR
-            curl -L -o $CLOUD_INIT_DIR/mantic-server-cloudimg-amd64.img https://cloud-images.ubuntu.com/mantic/20240410/mantic-server-cloudimg-amd64.img
+            curl -L -o mantic-server-cloudimg-amd64.img https://cloud-images.ubuntu.com/mantic/20240410/mantic-server-cloudimg-amd64.img
             # Create cloud-init user data file
             echo "Creating cloud-init user data..."
             cat > $CLOUD_INIT_DIR/user-data \<<EOF
