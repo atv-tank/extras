@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install QEMU, libvirt, and SSH
+          name: Install QEMU and SSH
           command: |
             apt update
             echo "5" | apt install -y qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virtinst cloud-image-utils openssh-client curl
@@ -17,64 +17,91 @@ jobs:
               ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa -N ""
             fi
       - run:
-          name: Setup and Run VM with virt-install
+          name: Setup QEMU VM
           command: |
-            mkdir -p /work
-            curl -L -o /work/mantic-server-cloudimg-amd64.img https://cloud-images.ubuntu.com/mantic/20240410/mantic-server-cloudimg-amd64.img
-            qemu-img resize /work/mantic-server-cloudimg-amd64.img 200G
-
-            # Create preseed file for automated installation
-            cat > /work/preseed.cfg \<<EOF
-            d-i debian-installer/locale string en_US
-            d-i console-setup/ask_detect boolean false
-            d-i console-setup/layoutcode string us
-            d-i keyboard-configuration/xkb-keymap select us
-            d-i netcfg/choose_interface select auto
-            d-i netcfg/get_hostname string ubuntu
-            d-i netcfg/get_domain string unassigned-domain
-            d-i mirror/country string manual
-            d-i mirror/http/hostname string archive.ubuntu.com
-            d-i mirror/http/directory string /ubuntu
-            d-i mirror/http/proxy string
-            d-i clock-setup/utc boolean true
-            d-i time/zone string Etc/UTC
-            d-i partman-auto/method string lvm
-            d-i partman-lvm/device_remove_lvm boolean true
-            d-i partman-lvm/confirm boolean true
-            d-i partman-lvm/confirm_nooverwrite boolean true
-            d-i partman-auto/choose_recipe select atomic
-            d-i partman/confirm_write_new_label boolean true
-            d-i partman/confirm boolean true
-            d-i partman/confirm_nooverwrite boolean true
-            d-i passwd/root-login boolean false
-            d-i passwd/make-user boolean true
-            d-i passwd/user-fullname string builduser
-            d-i passwd/username string builduser
-            d-i passwd/user-password password password
-            d-i passwd/user-password-again password password
-            d-i user-setup/allow-password-weak boolean true
-            d-i user-setup/encrypt-home boolean false
-            d-i pkgsel/include string openssh-server
-            d-i pkgsel/upgrade select none
-            d-i grub-installer/only_debian boolean true
-            d-i grub-installer/with_other_os boolean false
-            d-i finish-install/reboot_in_progress note
+            export IMAGE="mantic-server-cloudimg-amd64.img"
+            export STORAGE="mantic-server-storage.qcow2"
+            export USER_DATA="user-data.img"
+            export STORAGE_SIZE="250G"
+            export MOUNT_POINT="/mnt/newdisk"
+            export CLOUD_INIT_DIR="cloud-init"
+            
+            mkdir -p $CLOUD_INIT_DIR
+            curl -L -o $CLOUD_INIT_DIR/mantic-server-cloudimg-amd64.img https://cloud-images.ubuntu.com/mantic/20240410/mantic-server-cloudimg-amd64.img
+            # Create cloud-init user data file
+            echo "Creating cloud-init user data..."
+            cat > $CLOUD_INIT_DIR/user-data \<<EOF
+            #cloud-config
+            users:
+              - name: builder
+                ssh-authorized-keys:
+                  - $(cat ~/.ssh/id_rsa.pub)
+                sudo: ['ALL=(ALL) NOPASSWD:ALL']
+                groups: sudo
+                password: builder
+                chpasswd: { expire: False }
+                ssh_pwauth: True
+                shell: /bin/bash
             EOF
-
-            # Create virtual machine using virt-install
-            virt-install --name ubuntu-vm --ram 4096 --vcpus 4 --disk path=/work/mantic-server-cloudimg-amd64.img,format=qcow2 --os-type linux --os-variant ubuntu20.04 --graphics none --console pty,target_type=serial --location 'http://archive.ubuntu.com/ubuntu/dists/focal/main/installer-amd64/' --extra-args 'console=ttyS0,115200n8 serial' --initrd-inject=/work/preseed.cfg --extra-args "auto=true priority=critical preseed/file=/preseed.cfg"
-
-            sleep 30
-
-            # Verify VM is up and running
-            if ! ssh -o StrictHostKeyChecking=no builduser@localhost -p 2222 "echo VM Booted"; then
-              echo "VM did not boot correctly"
-              exit 1
-            fi
+            
+            # Create a 250GB storage disk
+            echo "Creating a $STORAGE_SIZE storage disk..."
+            qemu-img create -f qcow2 $STORAGE $STORAGE_SIZE
+            
+            # Create a cloud-init ISO
+            echo "Creating cloud-init ISO..."
+            cloud-localds $CLOUD_INIT_DIR/$USER_DATA $CLOUD_INIT_DIR/user-data
+            
+            # Run the QEMU image
+            echo "Starting the QEMU image..."
+            qemu-system-x86_64 \
+              -m 2G \
+              -smp 2 \
+              -drive file=$IMAGE,format=qcow2 \
+              -drive file=$STORAGE,format=qcow2 \
+              -drive file=$CLOUD_INIT_DIR/$USER_DATA,format=raw \
+              -net nic -net user,hostfwd=tcp::2222-:22 \
+              -nographic &
+            
+            # Wait for the VM to boot
+            echo "Waiting for the VM to boot..."
+            sleep 60
+            
+            # Partition the new storage disk
+            echo "Partitioning the storage disk..."
+            ssh -o StrictHostKeyChecking=no -p 2222 builder@localhost << 'EOF'
+            echo -e "n\np\n1\n\n\nw" | sudo fdisk /dev/sdb
+            EOF
+            
+            # Format the new partition
+            echo "Formatting the new partition..."
+            ssh -p 2222 builder@localhost 'sudo mkfs.ext4 /dev/sdb1'
+            
+            # Mount the new partition
+            echo "Mounting the new partition..."
+            ssh -p 2222 builder@localhost << EOF
+            sudo mkdir -p $MOUNT_POINT
+            sudo mount /dev/sdb1 $MOUNT_POINT
+            EOF
+            
+            # Get the UUID of the new partition
+            echo "Getting the UUID of the new partition..."
+            UUID=$(ssh -p 2222 builder@localhost 'sudo blkid -s UUID -o value /dev/sdb1')
+            
+            # Add entry to /etc/fstab for persistent mount
+            echo "Adding entry to /etc/fstab..."
+            ssh -p 2222 builder@localhost << EOF
+            echo "UUID=$UUID $MOUNT_POINT ext4 defaults 0 2" | sudo tee -a /etc/fstab
+            sudo mount -a
+            EOF
+            
+            echo "Setup complete."
       - run:
           name: Install Build Deps in QEMU
           command: |
             ssh -p 2222 -o StrictHostKeyChecking=no builduser@localhost \<< 'EOF'
+              mkdir -p $MOUNT_POINT/work
+              mkdir -p $MOUNT_POINT/work/android/lineage
               sudo apt update
               sudo apt install -y bc python3 procps bison build-essential ccache curl flex g++-multilib gcc-multilib git git-lfs gnupg gperf imagemagick lib32readline-dev lib32z1-dev libelf-dev liblz4-tool libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev openjdk-8-jdk openjdk-8-jre
               curl https://storage.googleapis.com/git-repo-downloads/repo > /home/builduser/work/bin/repo
@@ -86,9 +113,9 @@ jobs:
           command: |
             scp -P 2222 -o StrictHostKeyChecking=no -r . builduser@localhost:/home/builduser/work
             ssh -p 2222 -o StrictHostKeyChecking=no builduser@localhost \<< 'EOF'
-              cd /home/builduser/work
+              cd $MOUNT_POINT/work
               sudo sysctl -w net.ipv4.tcp_window_scaling=0
-              cd /home/builduser/work/android/lineage
+              cd $MOUNT_POINT/work/android/lineage
               git config --global user.email "shashankspis20@gmail.com"
               git config --global user.name "shashankx86"
               /home/builduser/work/bin/repo init --depth=1 --no-repo-verify -u https://github.com/atv-tank/manifest.git -b cm-14.1 -m default.xml
